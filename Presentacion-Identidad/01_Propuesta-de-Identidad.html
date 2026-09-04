@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDB Studio — Presentación de Identidad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /*
+         * BRIEF DE DISEÑO GLOB STUDIO:
+         * Emociones: Tranquilidad, Seguridad, Orden frente al caos.
+         * Cliente: GDB Studio. Perfil Clínico, Criterioso e Integrador (Sabio/Cuidador).
+         * Tipografía líder: DM Serif Display (Editorial/Autoridad) apoyada por DM Sans (Pragmatismo).
+         */
+
+        :root {
+            --c-claro: #F4F1EA;
+            --c-oscuro: #1C2B36;
+            --c-acento: #C06B49;
+            --c-neutro: #8C9CA6;
+
+            --f-display: 'DM Serif Display', serif;
+            --f-body: 'DM Sans', sans-serif;
+            --f-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        /* Reset y caja universal */
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 1. Bloqueo estricto de scroll horizontal en móviles */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--f-body);
+            background-color: #101B23;
+            /* Fondo exterior entre láminas */
+            color: var(--c-claro);
+            margin: 0;
+            padding: 1.5rem 0.75rem;
+            /* Padding seguro en teléfonos */
+        }
+
+        .font-display {
+            font-family: var(--f-display);
+        }
+
+        .font-mono {
+            font-family: var(--f-mono);
+        }
+
+        .presentation-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 2. Contenedor de Lámina / Diapositiva Editorial Independiente (Separación en pantalla) */
+        .slide {
+            width: 100%;
+            max-width: 1440px;
+            min-height: calc(100vh - 3rem);
+            height: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto 2.5rem auto;
+            /* Separación visual entre láminas */
+            border: 1px solid rgba(244, 241, 234, 0.12);
+            border-radius: 4px;
+            box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2);
+            page-break-inside: avoid;
+            page-break-after: always;
+            break-after: page;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            background-color: var(--c-oscuro);
+        }
+
+        /* 3. Sección interna con padding fluido según pantalla */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            min-height: calc(100vh - 3rem);
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.25rem 0.85rem;
+            gap: 1.5rem;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .content-layer.grid {
+            display: grid;
+            padding: 0 !important;
+            gap: 0 !important;
+        }
+
+        /* Tablets (>= 640px) */
+        @media (min-width: 640px) {
+            body {
+                padding: 2rem 1.25rem;
+            }
+
+            .slide {
+                margin-bottom: 3rem;
+            }
+
+            .content-layer {
+                padding: 2.25rem 2rem;
+                gap: 2rem;
+            }
+        }
+
+        /* Laptops y Tablets Grandes (>= 768px) */
+        @media (min-width: 768px) {
+            body {
+                padding: 3rem 1.5rem;
+            }
+
+            .content-layer {
+                padding: 3rem 3.5rem;
+            }
+        }
+
+        /* Pantallas Grandes (>= 1280px) */
+        @media (min-width: 1280px) {
+            body {
+                padding: 3.5rem 2rem;
+            }
+
+            .content-layer {
+                padding: 3.5rem 4rem;
+            }
+        }
+
+        /* 4. Prevención universal de ruptura y corte de textos */
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span,
+        div {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--f-display);
+            font-size: clamp(5rem, 25vw, 65vh);
+            line-height: 0.8;
+            color: var(--c-claro);
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .watermark.dark {
+            color: var(--c-oscuro);
+            opacity: 0.04;
+        }
+
+        .technical-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(244, 241, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(244, 241, 234, 0.05) 1px, transparent 1px);
+            background-size: clamp(24px, 5vw, 48px) clamp(24px, 5vw, 48px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .technical-grid.dark {
+            background-image:
+                linear-gradient(rgba(28, 43, 54, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(28, 43, 54, 0.05) 1px, transparent 1px);
+        }
+
+        /* Marcas de registro arquitectónicas */
+        .reg-mark {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .reg-mark::before {
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 15px;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0.3;
+        }
+
+        .reg-mark::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 7px;
+            width: 1px;
+            height: 15px;
+            background-color: currentColor;
+            opacity: 0.3;
+        }
+
+        .rm-tl {
+            top: 0.75rem;
+            left: 0.75rem;
+        }
+
+        .rm-tr {
+            top: 0.75rem;
+            right: 0.75rem;
+        }
+
+        .rm-bl {
+            bottom: 0.75rem;
+            left: 0.75rem;
+        }
+
+        .rm-br {
+            bottom: 0.75rem;
+            right: 0.75rem;
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-preview-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .badge {
+            font-family: var(--f-mono);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.35rem 0.75rem;
+            border: 1px solid rgba(244, 241, 234, 0.2);
+            border-radius: 99px;
+            color: var(--c-claro);
+            display: inline-block;
+        }
+
+        /* Nav flotante discreta */
+        .nav-bullets {
+            position: fixed;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .nav-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(244, 241, 234, 0.25);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .nav-bullet:hover,
+        .nav-bullet.active {
+            background: var(--c-acento);
+            transform: scale(1.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-bullets {
+                display: none;
+            }
+        }
+
+        /* 5. Reglas de Exportación Nativa PDF A4 Horizontal */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            @page {
+                size: A4 landscape;
+                margin: 0 !important;
+            }
+
+            body,
+            html,
+            main {
+                background-color: var(--c-oscuro) !important;
+                width: 297mm !important;
+                overflow: visible !important;
+                padding: 0 !important;
+            }
+
+            .no-print,
+            .nav-bullets {
+                display: none !important;
+            }
+
+            .slide {
+                width: 297mm !important;
+                height: 210mm !important;
+                max-width: 297mm !important;
+                max-height: 210mm !important;
+                overflow: hidden !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                page-break-inside: avoid !important;
+                page-break-after: always !important;
+                break-after: page !important;
+            }
+
+            .content-layer {
+                min-height: 210mm !important;
+                height: 210mm !important;
+                padding: 1.5rem 2rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BOTÓN FLOTANTE DE EXPORTACIÓN PDF (SOLO PANTALLA) -->
+    <div class="no-print fixed bottom-5 right-5 z-50">
+        <button onclick="window.print()" title="Exportar o Imprimir PDF"
+            class="bg-siena hover:opacity-90 active:scale-95 text-white font-bold px-4 py-2.5 rounded-full transition-all shadow-2xl flex items-center gap-2 border border-white/20 backdrop-blur-sm font-mono text-xs cursor-pointer"
+            style="background-color: var(--c-acento);">
+            <span>PDF</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navegación lateral sutil para el presentador -->
+    <nav class="nav-bullets no-print" aria-label="Navegación de diapositivas">
+        <a href="#slide-1" class="nav-bullet" title="Portada"></a>
+        <a href="#slide-2" class="nav-bullet" title="01. Fundamento"></a>
+        <a href="#slide-3" class="nav-bullet" title="02. Propuesta A"></a>
+        <a href="#slide-4" class="nav-bullet" title="03. Propuesta B"></a>
+        <a href="#slide-5" class="nav-bullet" title="04. Propuesta C"></a>
+        <a href="#slide-6" class="nav-bullet" title="05. Análisis"></a>
+        <a href="#slide-7" class="nav-bullet" title="06. Recursos"></a>
+        <a href="#slide-8" class="nav-bullet" title="Próximos Pasos"></a>
+    </nav>
+
+    <main class="presentation-container">
+
+        <!-- SLIDE 1: PORTADA -->
+        <section id="slide-1" class="slide items-center justify-center text-center">
+            <div class="technical-grid"></div>
+            <div class="watermark">GDB</div>
+
+            <div class="content-layer flex flex-col items-center justify-center px-6 sm:px-10 py-12">
+                <div class="mb-6 sm:mb-8 overflow-hidden">
+                    <span class="block uppercase font-mono text-xs tracking-[0.25em] sm:tracking-[0.3em] mb-4"
+                        style="color: var(--c-acento);">
+                        Presentación de Propuestas
+                    </span>
+                </div>
+
+                <h1
+                    class="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-6 sm:mb-8 leading-none tracking-tight">
+                    GDB Studio
+                </h1>
+
+                <div class="w-px h-16 sm:h-24 mb-6 sm:mb-8" style="background-color: var(--c-acento); opacity: 0.5;">
+                </div>
+
+                <h2 class="text-lg sm:text-xl md:text-2xl font-light tracking-widest uppercase opacity-80">
+                    Sistema de Identidad
+                </h2>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: FUNDAMENTO ESTRATÉGICO -->
+        <section id="slide-2" class="slide" style="background-color: var(--c-claro); color: var(--c-oscuro);">
+            <div class="watermark dark">ADN</div>
+
+            <div class="content-layer grid grid-cols-1 lg:grid-cols-12 h-full">
+                <div
+                    class="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-black/10 p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center relative">
+                    <div class="reg-mark rm-tl"></div>
+                    <div class="reg-mark rm-bl"></div>
+
+                    <span class="font-mono text-xs tracking-widest uppercase mb-4 opacity-50">01. Fundamento
+                        Estratégico</span>
+                    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl mb-6 sm:mb-8 leading-tight">El
+                        orden<br>frente al caos.</h2>
+
+                    <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 opacity-80 font-light">
+                        Construimos un universo visual diseñado para evocar <strong>Tranquilidad</strong> y
+                        <strong>Seguridad</strong>. GDB Studio se planta como una matriz que ordena la intuición
+                        desordenada de sus clientes, brindando claridad diagnóstica.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed opacity-80 font-light">
+                        Cada elemento visual fue depurado para comunicar hospitalidad sin perder el rigor clínico.
+                    </p>
+                </div>
+
+                <div
+                    class="lg:col-span-7 p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center relative bg-white/50">
+                    <div class="reg-mark rm-tr"></div>
+                    <div class="reg-mark rm-br"></div>
+
+                    <div class="grid grid-cols-1 gap-6 sm:gap-8 lg:gap-10 max-w-lg mx-auto w-full">
+                        <div class="border-t border-black/10 pt-4 sm:pt-6">
+                            <h3 class="font-mono text-xs tracking-widest uppercase mb-1 sm:mb-2"
+                                style="color: var(--c-acento);">Matriz de Arquetipos</h3>
+                            <p class="font-display text-2xl sm:text-3xl">El Sabio / El Cuidador</p>
+                        </div>
+                        <div class="border-t border-black/10 pt-4 sm:pt-6">
+                            <h3 class="font-mono text-xs tracking-widest uppercase mb-1 sm:mb-2"
+                                style="color: var(--c-acento);">Personalidad de Marca</h3>
+                            <p class="font-display text-2xl sm:text-3xl">Clínica, Criteriosa e Integradora</p>
+                        </div>
+                        <div class="border-t border-black/10 pt-4 sm:pt-6">
+                            <h3 class="font-mono text-xs tracking-widest uppercase mb-1 sm:mb-2"
+                                style="color: var(--c-acento);">Dirección de Arte</h3>
+                            <p class="text-base sm:text-xl font-light opacity-80">Minimalismo arquitectónico, grillas
+                                precisas y silencios visuales. Fuerte contraste editorial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: PROPUESTA A -->
+        <section id="slide-3" class="slide">
+            <div class="technical-grid"></div>
+            <div class="content-layer grid grid-cols-1 lg:grid-cols-12 h-full">
+
+                <!-- Contexto -->
+                <div
+                    class="lg:col-span-4 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+                    <div>
+                        <span class="font-mono text-xs tracking-widest uppercase mb-4 sm:mb-6 block"
+                            style="color: var(--c-acento);">02. Propuesta A</span>
+                        <h2 class="font-display text-3xl sm:text-4xl mb-4 sm:mb-6">El Orden de<br>la Matriz</h2>
+                        <p class="text-sm sm:text-base leading-relaxed opacity-80 font-light">
+                            Esta propuesta es la traducción directa y depurada del concepto de 'Estructura empática' y
+                            la 'Semilla de la Vida'. Materializa la promesa de 'Tranquilidad' y 'Seguridad' a través de
+                            un orden sistémico, reflejando el rigor del arquetipo Sabio y la coherencia de la
+                            personalidad Clínica.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6 lg:mt-8">
+                        <span class="badge">Imagotipo</span>
+                        <span class="badge">DM Serif Display</span>
+                        <span class="badge">DM Sans</span>
+                    </div>
+                </div>
+
+                <!-- Exhibición -->
+                <div class="lg:col-span-8 p-4 sm:p-6 md:p-8 flex flex-col gap-4 sm:gap-6 h-full justify-center"
+                    style="background-color: var(--c-claro);">
+                    <!-- Versión Principal Clara -->
+                    <div
+                        class="logo-preview-card h-52 sm:h-64 lg:h-3/5 w-full border border-black/5 relative flex items-center justify-center p-6 sm:p-8 bg-white shadow-sm rounded-sm">
+                        <div class="reg-mark rm-tl text-black"></div>
+                        <div class="reg-mark rm-br text-black"></div>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro.png"
+                            alt="Propuesta A - Versión Clara" class="w-full h-full object-contain max-h-[36vh]">
+                    </div>
+
+                    <!-- Variantes Oscura y Mono -->
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:h-2/5">
+                        <div class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 border border-white/10 rounded-sm min-h-[140px]"
+                            style="background-color: var(--c-oscuro);">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro.png"
+                                alt="Propuesta A - Versión Oscura" class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                        <div
+                            class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 bg-white border border-black/5 rounded-sm min-h-[140px]">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Mono.png"
+                                alt="Propuesta A - Versión Monocromática"
+                                class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SLIDE 4: PROPUESTA B -->
+        <section id="slide-4" class="slide">
+            <div class="technical-grid"></div>
+            <div class="content-layer grid grid-cols-1 lg:grid-cols-12 h-full">
+
+                <!-- Contexto -->
+                <div
+                    class="lg:col-span-4 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+                    <div>
+                        <span class="font-mono text-xs tracking-widest uppercase mb-4 sm:mb-6 block"
+                            style="color: var(--c-acento);">03. Propuesta B</span>
+                        <h2 class="font-display text-3xl sm:text-4xl mb-4 sm:mb-6">La Conexión<br>Esencial</h2>
+                        <p class="text-sm sm:text-base leading-relaxed opacity-80 font-light">
+                            Esta opción se enfoca en la 'Interconexión' y la 'Integridad', valores clave de GDB Studio.
+                            Propone un símbolo más abstracto y fluido, una síntesis elegante de la unión y la
+                            hospitalidad, resonando con el arquetipo Cuidador y la personalidad Integradora.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6 lg:mt-8">
+                        <span class="badge">Imagotipo</span>
+                        <span class="badge">DM Serif Display</span>
+                        <span class="badge">DM Sans</span>
+                    </div>
+                </div>
+
+                <!-- Exhibición -->
+                <div class="lg:col-span-8 p-4 sm:p-6 md:p-8 flex flex-col gap-4 sm:gap-6 h-full justify-center"
+                    style="background-color: var(--c-claro);">
+                    <!-- Versión Principal Clara -->
+                    <div
+                        class="logo-preview-card h-52 sm:h-64 lg:h-3/5 w-full border border-black/5 relative flex items-center justify-center p-6 sm:p-8 bg-white shadow-sm rounded-sm">
+                        <div class="reg-mark rm-tl text-black"></div>
+                        <div class="reg-mark rm-br text-black"></div>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                            alt="Propuesta B - Versión Clara" class="w-full h-full object-contain max-h-[36vh]">
+                    </div>
+
+                    <!-- Variantes Oscura y Mono -->
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:h-2/5">
+                        <div class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 border border-white/10 rounded-sm min-h-[140px]"
+                            style="background-color: var(--c-oscuro);">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro2.png"
+                                alt="Propuesta B - Versión Oscura" class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                        <div
+                            class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 bg-white border border-black/5 rounded-sm min-h-[140px]">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Mono2.png"
+                                alt="Propuesta B - Versión Monocromática"
+                                class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SLIDE 5: PROPUESTA C -->
+        <section id="slide-5" class="slide">
+            <div class="technical-grid"></div>
+            <div class="content-layer grid grid-cols-1 lg:grid-cols-12 h-full">
+
+                <!-- Contexto -->
+                <div
+                    class="lg:col-span-4 p-6 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+                    <div>
+                        <span class="font-mono text-xs tracking-widest uppercase mb-4 sm:mb-6 block"
+                            style="color: var(--c-acento);">04. Propuesta C</span>
+                        <h2 class="font-display text-3xl sm:text-4xl mb-4 sm:mb-6">El Eje<br>Lúcido</h2>
+                        <p class="text-sm sm:text-base leading-relaxed opacity-80 font-light">
+                            Esta propuesta explora la 'Transformación' y el 'Diagnóstico certero' con un enfoque más
+                            dinámico y direccional. El símbolo, una matriz precisa y angular, evoca la claridad y el
+                            pragmatismo, alineándose con la personalidad Clínica y Criteriosa de la marca.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6 lg:mt-8">
+                        <span class="badge">Imagotipo</span>
+                        <span class="badge">DM Serif Display</span>
+                        <span class="badge">DM Sans</span>
+                    </div>
+                </div>
+
+                <!-- Exhibición -->
+                <div class="lg:col-span-8 p-4 sm:p-6 md:p-8 flex flex-col gap-4 sm:gap-6 h-full justify-center"
+                    style="background-color: var(--c-claro);">
+                    <!-- Versión Principal Clara -->
+                    <div
+                        class="logo-preview-card h-52 sm:h-64 lg:h-3/5 w-full border border-black/5 relative flex items-center justify-center p-6 sm:p-8 bg-white shadow-sm rounded-sm">
+                        <div class="reg-mark rm-tl text-black"></div>
+                        <div class="reg-mark rm-br text-black"></div>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro3.png"
+                            alt="Propuesta C - Versión Clara" class="w-full h-full object-contain max-h-[36vh]">
+                    </div>
+
+                    <!-- Variantes Oscura y Mono -->
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:h-2/5">
+                        <div class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 border border-white/10 rounded-sm min-h-[140px]"
+                            style="background-color: var(--c-oscuro);">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro3.png"
+                                alt="Propuesta C - Versión Oscura" class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                        <div
+                            class="logo-preview-card relative flex items-center justify-center p-4 sm:p-6 bg-white border border-black/5 rounded-sm min-h-[140px]">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Mono3.png"
+                                alt="Propuesta C - Versión Monocromática"
+                                class="w-full h-full object-contain max-h-[18vh]">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SLIDE 6: COMPARATIVA Y VEREDICTO -->
+        <section id="slide-6" class="slide" style="background-color: var(--c-claro); color: var(--c-oscuro);">
+            <div class="technical-grid dark"></div>
+            <div class="content-layer p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-between h-full">
+
+                <header class="mb-6 sm:mb-8 text-center flex flex-col items-center">
+                    <span class="font-mono text-xs tracking-widest uppercase mb-2 sm:mb-3 block"
+                        style="color: var(--c-acento);">05. Análisis Estratégico</span>
+                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl">Comparativa y Veredicto</h2>
+                </header>
+
+                <!-- Vitrina Comparativa -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 flex-grow mb-6 sm:mb-8">
+                    <div
+                        class="relative border border-black/10 flex flex-col items-center justify-center bg-white p-6 sm:p-8 rounded-sm opacity-75 hover:opacity-100 transition-opacity">
+                        <span class="absolute top-3 left-3 font-mono text-xs opacity-50">A</span>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro.png"
+                            alt="Opción A" class="w-full h-24 sm:h-32 object-contain">
+                    </div>
+                    <div
+                        class="relative border-2 border-[var(--c-acento)] flex flex-col items-center justify-center bg-white p-6 sm:p-8 rounded-sm shadow-sm transition-all">
+                        <span class="absolute top-3 left-3 font-mono text-xs px-2 py-0.5 rounded font-bold"
+                            style="background: var(--c-acento); color: white;">B · RECOMENDADA</span>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                            alt="Opción B" class="w-full h-24 sm:h-32 object-contain">
+                    </div>
+                    <div
+                        class="relative border-black/10 flex flex-col items-center justify-center bg-white p-6 sm:p-8 rounded-sm opacity-75 hover:opacity-100 transition-opacity border">
+                        <span class="absolute top-3 left-3 font-mono text-xs opacity-50">C</span>
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro3.png"
+                            alt="Opción C" class="w-full h-24 sm:h-32 object-contain">
+                    </div>
+                </div>
+
+                <!-- Veredicto Glob Studio -->
+                <div class="border border-black/10 bg-white p-6 sm:p-8 lg:p-10 relative rounded-sm shadow-sm">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background-color: var(--c-acento);"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center">
+                        <div class="col-span-1">
+                            <h3 class="font-display text-2xl sm:text-3xl mb-1 sm:mb-2">Recomendamos<br
+                                    class="hidden sm:inline">la Propuesta B</h3>
+                            <p class="font-mono text-xs uppercase opacity-50 tracking-wider">Veredicto Glob Studio</p>
+                        </div>
+                        <div class="lg:col-span-2">
+                            <p class="text-sm sm:text-base leading-relaxed opacity-90 font-light">
+                                La Propuesta B, 'La Conexión Esencial', se enfoca en la 'Interconexión' y la
+                                'Integridad', valores clave de GDB Studio. Propone un símbolo más abstracto y fluido,
+                                una síntesis elegante de la unión y la hospitalidad, resonando con el arquetipo Cuidador
+                                y la personalidad Integradora.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paleta Vitrina -->
+                <div
+                    class="flex mt-6 sm:mt-8 h-4 sm:h-6 w-full max-w-xl mx-auto border border-black/10 rounded overflow-hidden">
+                    <div class="flex-[2]" style="background-color: var(--c-oscuro);" title="#1C2B36 Deep Slate Blue">
+                    </div>
+                    <div class="flex-1" style="background-color: var(--c-acento);" title="#C06B49 Warm Sienna"></div>
+                    <div class="flex-[2]" style="background-color: var(--c-claro);" title="#F4F1EA Light Beige"></div>
+                    <div class="flex-1 bg-white" title="#FFFFFF Pure White"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SLIDE 7: RECURSOS Y APLICACIÓN -->
+        <section id="slide-7" class="slide">
+            <div class="technical-grid"></div>
+            <div class="content-layer p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col h-full justify-between">
+                <header class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
+                    <div>
+                        <span class="font-mono text-xs tracking-widest uppercase opacity-50 block mb-1">06. Sistema
+                            Gráfico</span>
+                        <h2 class="font-display text-3xl sm:text-4xl">Recursos y Aplicación</h2>
+                    </div>
+                    <span class="badge border-white/20">Activos de Marca</span>
+                </header>
+
+                <div class="flex items-center justify-center flex-grow">
+                    <!-- Sello de Hospitalidad Centrado -->
+                    <div
+                        class="border border-white/15 relative p-6 sm:p-10 bg-white/5 flex flex-col justify-between rounded-sm w-full max-w-xl">
+                        <div class="reg-mark rm-tl"></div>
+                        <div class="reg-mark rm-tr"></div>
+                        <div class="reg-mark rm-bl"></div>
+                        <div class="reg-mark rm-br"></div>
+
+                        <div class="mb-6 text-center">
+                            <span class="font-mono text-xs uppercase tracking-widest block mb-1"
+                                style="color: var(--c-acento);">Sello de Hospitalidad</span>
+                            <h3 class="font-display text-2xl sm:text-3xl">Monograma de Autoría</h3>
+                        </div>
+
+                        <div
+                            class="h-56 sm:h-72 flex items-center justify-center p-6 bg-white/90 rounded border border-white/10">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro4.png"
+                                alt="Sello de Hospitalidad - G 2026" class="w-full h-full object-contain max-h-[35vh]">
+                        </div>
+
+                        <p class="text-xs sm:text-sm font-light opacity-75 mt-6 text-center">
+                            Monograma circular cerrado que evoca la firma de un anfitrión de alta escuela, transmitiendo
+                            la esencia de 'Hospitalidad' y 'Autoría' (G 2026).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: PRÓXIMOS PASOS -->
+        <section id="slide-8" class="slide" style="background-color: var(--c-acento); color: var(--c-claro);">
+            <div class="technical-grid opacity-20"></div>
+
+            <div
+                class="content-layer flex flex-col justify-center items-center text-center px-6 sm:px-12 py-12 relative my-auto">
+                <div class="reg-mark rm-tl"></div>
+                <div class="reg-mark rm-br"></div>
+
+                <h2 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 sm:mb-8 leading-none">
+                    Próximos Pasos
+                </h2>
+
+                <div
+                    class="max-w-2xl mx-auto space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl mb-10 sm:mb-12 opacity-95 font-light">
+                    <p>
+                        Tomate el tiempo para convivir con estas propuestas. Evaluá cuál conecta más fuerte con la
+                        proyección que tenés para el futuro de tu consultora y la promesa hacia tus clientes.
+                    </p>
+                    <p>
+                        Una vez que tomes una decisión, o si necesitás pelotear ideas para afinar detalles, avisanos
+                        para avanzar con el desarrollo del manual y los entregables finales.
+                    </p>
+                </div>
+
+                <div class="border-t border-white/30 pt-6 sm:pt-8 w-full max-w-md flex flex-col items-center">
+                    <span class="font-mono text-xs tracking-[0.2em] uppercase opacity-80 mb-3 block">Contacto Dirección
+                        de Arte</span>
+                    <a href="mailto:hola@globstudio.com"
+                        class="font-display text-2xl sm:text-3xl hover:opacity-75 transition-opacity underline decoration-white/30 underline-offset-8">hola@globstudio.com</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Resaltar bullet de navegación activo al hacer scroll
+        const slides = document.querySelectorAll('.slide');
+        const bullets = document.querySelectorAll('.nav-bullet');
+        const container = document.querySelector('.presentation-container');
+
+        function updateActiveBullet() {
+            let currentSlideIndex = 0;
+            const containerScrollTop = container ? container.scrollTop : window.scrollY;
+
+            slides.forEach((slide, index) => {
+                const slideTop = slide.offsetTop - 150;
+                if (containerScrollTop >= slideTop) {
+                    currentSlideIndex = index;
+                }
+            });
+
+            bullets.forEach((bullet, index) => {
+                if (index === currentSlideIndex) {
+                    bullet.classList.add('active');
+                } else {
+                    bullet.classList.remove('active');
+                }
+            });
+        }
+
+        if (container) {
+            container.addEventListener('scroll', updateActiveBullet, { passive: true });
+        }
+        window.addEventListener('scroll', updateActiveBullet, { passive: true });
+        updateActiveBullet();
+
+        // Soporte para teclas de navegación (flechas arriba/abajo o RePág/AvPág)
+        window.addEventListener('keydown', (e) => {
+            const activeIndex = Array.from(bullets).findIndex(b => b.classList.contains('active'));
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                if (activeIndex < slides.length - 1) {
+                    slides[activeIndex + 1].scrollIntoView({ behavior: 'smooth' });
+                    e.preventDefault();
+                }
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                if (activeIndex > 0) {
+                    slides[activeIndex - 1].scrollIntoView({ behavior: 'smooth' });
+                    e.preventDefault();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

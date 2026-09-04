@@ -1,0 +1,3152 @@
+<!--
+================================================================================
+GLOB STUDIO — SISTEMA DE MARCA
+FASE 6 — DOSSIER MAESTRO & BRAND BOOK INTEGRAL (19 LÁMINAS A4 LANDSCAPE)
+================================================================================
+Cliente: GDB Studio | Rubro: Servicios / Consultoría B2B | Fecha: Septiembre 2026
+Autor: Glob Studio · Brand Architecture | Versión: v1.0 Aprobado
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDB Studio — Dossier Maestro & Brand Book Integral (19 Láminas)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lienzo: '#F4F1EA',
+                        tinta: '#1C2B36',
+                        siena: '#C06B49',
+                        olivo: '#4A5D4E',
+                        piedra: '#D2CEC4',
+                        papel: '#E2DDD3',
+                    },
+                    fontFamily: {
+                        serif: ['"DM Serif Display"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /*
+        ================================================================================
+        DIRECCIÓN DE ARTE · DOSSIER EDITORIAL GDB STUDIO (UNIFICADO COMPLETO)
+        ================================================================================
+        Concepto Visual: "Estructura empática: la precisión geométrica al servicio de la calidez humana".
+        Estilo: Minimalismo editorial cálido, sobrio y arquitectónico.
+        Arquetipos de Marca: El Sabio (diagnóstico, pausa lúcida, rigor clínico) + El Cuidador (acogida, escucha activa, hospitalidad en trinchera).
+        Paleta Cromática: Lienzo Arena (#F4F1EA), Azul Pizarra (#1C2B36), Tierra de Siena (#C06B49), Verde Olivo (#4A5D4E) y Gris Piedra (#D2CEC4).
+        Tipografía: DM Serif Display (titulares y autoridad), DM Sans (prosa editorial) y JetBrains Mono (técnica y metadatos).
+        ================================================================================
+        */
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        body {
+            background-color: #E2DDD3;
+            color: #1C2B36;
+            margin: 0;
+            padding: 1.5rem 0.75rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* Lámina canónica individual en pantalla */
+        .brand-sheet {
+            width: 100%;
+            max-width: 1440px;
+            min-height: calc(100vh - 3rem);
+            height: auto;
+            background-color: #F4F1EA;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto 2.5rem auto;
+            border: 1px solid rgba(210, 206, 196, 0.9);
+            border-radius: 4px;
+            box-shadow: 0 16px 40px -12px rgba(28, 43, 54, 0.12), 0 2px 6px rgba(28, 43, 54, 0.04);
+            page-break-inside: avoid;
+            page-break-after: always;
+            break-after: page;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .brand-sheet>section {
+            width: 100%;
+            max-width: 100%;
+            min-height: calc(100vh - 3rem);
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.25rem 0.85rem !important;
+            gap: 1.5rem;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 640px) {
+            body {
+                padding: 2rem 1.25rem;
+            }
+
+            .brand-sheet>section {
+                padding: 2.25rem 2rem !important;
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 3rem 1.5rem;
+            }
+
+            .brand-sheet>section {
+                padding: 3rem 3.5rem !important;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            body {
+                padding: 3.5rem 2rem;
+            }
+
+            .brand-sheet>section {
+                padding: 3.5rem 4rem !important;
+            }
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span,
+        div {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+        /* =============================================================================
+           REGLAS ESTRICTAS DE EXPORTACIÓN NATIVA PDF (A4 LANDSCAPE 297mm x 210mm)
+           ============================================================================= */
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 0;
+            }
+
+            *,
+            *::before,
+            *::after {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                box-sizing: border-box !important;
+            }
+
+            /* Reset de márgenes y paddings del body para evitar desbordes */
+            html,
+            body {
+                width: 297mm !important;
+                height: auto !important;
+                min-height: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background-color: #F4F1EA !important;
+                overflow: visible !important;
+                max-width: none !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            /* Fijación estricta de lámina a 297mm x 210mm */
+            .brand-sheet {
+                width: 297mm !important;
+                height: 210mm !important;
+                max-width: 297mm !important;
+                max-height: 210mm !important;
+                min-height: 210mm !important;
+                overflow: hidden !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                page-break-inside: avoid !important;
+                page-break-after: always !important;
+                page-break-before: auto !important;
+                break-inside: avoid-page !important;
+                break-after: page !important;
+                break-before: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                position: relative !important;
+            }
+
+            .brand-sheet:last-of-type,
+            .brand-sheet:last-child {
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+            }
+
+            .brand-sheet>section {
+                width: 100% !important;
+                height: 210mm !important;
+                max-height: 210mm !important;
+                min-height: 210mm !important;
+                padding: 8mm 12mm !important;
+                gap: 0.4rem !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
+                overflow: hidden !important;
+            }
+
+            /* Forzar cuadrículas de escritorio (evita el colapso vertical en impresión) */
+            .grid-cols-12 {
+                display: grid !important;
+                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+            }
+
+            .col-span-12.lg\:col-span-3,
+            .lg\:col-span-3 {
+                grid-column: span 3 / span 3 !important;
+            }
+
+            .col-span-12.lg\:col-span-4,
+            .lg\:col-span-4 {
+                grid-column: span 4 / span 4 !important;
+            }
+
+            .col-span-12.lg\:col-span-5,
+            .lg\:col-span-5 {
+                grid-column: span 5 / span 5 !important;
+            }
+
+            .col-span-12.lg\:col-span-6,
+            .lg\:col-span-6 {
+                grid-column: span 6 / span 6 !important;
+            }
+
+            .col-span-12.lg\:col-span-7,
+            .lg\:col-span-7 {
+                grid-column: span 7 / span 7 !important;
+            }
+
+            .col-span-12.lg\:col-span-8,
+            .lg\:col-span-8 {
+                grid-column: span 8 / span 8 !important;
+            }
+
+            .lg\:grid-cols-5,
+            .grid-cols-5 {
+                grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+            }
+
+            .lg\:grid-cols-4,
+            .grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            }
+
+            .lg\:grid-cols-3,
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+
+            .lg\:grid-cols-2,
+            .md\:grid-cols-2,
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            .border-r-0.lg\:border-r {
+                border-right-width: 1px !important;
+            }
+
+            .border-b-0.lg\:border-b {
+                border-bottom-width: 1px !important;
+            }
+
+            .md\:flex-row,
+            .sm\:flex-row,
+            .lg\:flex-row {
+                flex-direction: row !important;
+            }
+
+            .hidden.sm\:flex,
+            .hidden.md\:flex,
+            .hidden.lg\:flex {
+                display: flex !important;
+            }
+
+            .hidden.sm\:block,
+            .hidden.md\:block,
+            .hidden.lg\:block {
+                display: block !important;
+            }
+
+            /* Contención vertical */
+            header {
+                padding-bottom: 2mm !important;
+                margin-bottom: 0 !important;
+            }
+
+            footer {
+                padding-top: 2mm !important;
+                margin-top: 0 !important;
+            }
+
+            main {
+                margin-top: auto !important;
+                margin-bottom: auto !important;
+                padding-top: 1mm !important;
+                padding-bottom: 1mm !important;
+            }
+
+            img {
+                max-height: 100% !important;
+                object-fit: contain !important;
+            }
+
+            /* Excepción de padding para láminas densas */
+            .sheet-dense>section {
+                padding: 5mm 12mm !important;
+                gap: 0.25rem !important;
+            }
+        }
+
+        /* Botón de impresión flotante */
+        .print-fab {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 50;
+            background-color: #1C2B36;
+            color: #F4F1EA;
+            border: 1px solid #C06B49;
+            box-shadow: 0 10px 25px -5px rgba(28, 43, 54, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .print-fab:hover {
+            background-color: #C06B49;
+            color: #F4F1EA;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BOTÓN DE IMPRESIÓN (EXCLUIDO EN PDF) -->
+    <button onclick="window.print()"
+        class="print-fab no-print flex items-center gap-2 px-5 py-3 rounded-full text-xs uppercase tracking-widest font-mono font-medium cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+        <span>Exportar A4 Landscape (19 Páginas)</span>
+    </button>
+
+    <!-- =============================================================================
+         PARTE I: BRIEF DE MARCA & DIAGNÓSTICO (PÁGINAS 01 A 06)
+         ============================================================================= -->
+
+    <!-- =============================================================================
+         PÁGINA 01: PORTADA MAESTRA INSTITUCIONAL
+         ============================================================================= -->
+    <div id="p01" class="brand-sheet">
+        <section class="bg-lienzo text-tinta relative overflow-hidden">
+            <!-- Marca de agua técnica geométrica sutil -->
+            <div class="absolute -right-20 -bottom-20 pointer-events-none opacity-[0.03]">
+                <svg width="600" height="600" viewBox="0 0 100 100" fill="none" stroke="#1C2B36" stroke-width="0.5">
+                    <circle cx="50" cy="50" r="45" />
+                    <circle cx="50" cy="30" r="25" />
+                    <circle cx="50" cy="70" r="25" />
+                    <circle cx="35" cy="50" r="25" />
+                    <circle cx="65" cy="50" r="25" />
+                </svg>
+            </div>
+
+            <!-- Header Técnico -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-end">
+                <div>
+                    <span class="font-mono text-[10px] tracking-[0.2em] text-siena uppercase font-medium block">GLOB
+                        STUDIO · FASE 6</span>
+                    <h2 class="font-mono text-xs uppercase tracking-wider text-tinta/80 mt-0.5">SISTEMA INTEGRAL DE
+                        IDENTIDAD ESTRATÉGICA</h2>
+                </div>
+                <div class="text-right font-mono text-[10px] text-tinta/60 tracking-wider">
+                    <span>DOCUMENTO MAESTRO</span> · <span class="text-siena font-semibold">PARTE I</span>
+                </div>
+            </header>
+
+            <!-- Main Portada -->
+            <main class="grid grid-cols-12 gap-8 items-center py-4">
+                <div class="col-span-12 lg:col-span-8 flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-siena"></span>
+                        <span class="font-mono text-xs uppercase tracking-[0.25em] text-olivo font-semibold">BRIEF DE
+                            MARCA & DIAGNÓSTICO</span>
+                    </div>
+                    <div class="mb-6 py-2">
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                            alt="GDB Studio"
+                            class="h-[110px] sm:h-[140px] lg:h-[175px] w-auto max-w-full object-contain drop-shadow-xs">
+                    </div>
+                    <p class="font-serif italic text-xl lg:text-2xl text-siena max-w-2xl leading-relaxed mb-6">
+                        «Estructura empática: la precisión geométrica al servicio de la calidez humana.»
+                    </p>
+                    <p class="text-sm sm:text-base text-tinta/75 max-w-xl font-normal leading-relaxed">
+                        El aliado estratégico que transforma la intuición desordenada en una cultura de hospitalidad,
+                        servicio y eficiencia autónoma.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-4 border-l border-piedra/60 pl-8 space-y-5">
+                    <div class="border-b border-piedra/40 pb-3">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">Cliente
+                            Institucional</span>
+                        <span class="font-serif text-lg text-tinta">GDB Studio</span>
+                        <span class="font-mono text-xs text-tinta/60 block mt-0.5">Fundador: Glodier Dario Biedma</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 border-b border-piedra/40 pb-3">
+                        <div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">Rubro
+                                Operativo</span>
+                            <span class="text-xs font-semibold text-tinta uppercase tracking-wide">Servicios /
+                                Consultoría B2B</span>
+                        </div>
+                        <div>
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">Mercado</span>
+                            <span class="text-xs font-semibold text-tinta uppercase tracking-wide">Boutique ·
+                                Argentina</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 border-b border-piedra/40 pb-3">
+                        <div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">Fecha de
+                                Emisión</span>
+                            <span class="text-xs font-mono text-tinta">Septiembre 2026</span>
+                        </div>
+                        <div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">Versión /
+                                Estado</span>
+                            <span class="text-xs font-mono text-tinta">v1.0 · Aprobado</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-1">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block mb-1">Dirección
+                            & Desarrollo</span>
+                        <span class="font-mono text-xs font-medium text-tinta tracking-wide">Glob Studio · Brand
+                            Architecture</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer Técnico -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-tinta/60 gap-2">
+                <div class="flex items-center gap-4">
+                    <span>GDB-STUDIO-DOC-01</span>
+                    <span class="text-piedra">|</span>
+                    <span>CONFIDENCIAL & EXCLUSIVO</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 01 / 19</span>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 02: TARJETA INTRODUCTORIA · ¿QUÉ ES EL BRIEF DE MARCA?
+         ============================================================================= -->
+    <div id="p02" class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">02</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">MARCO CONCEPTUAL</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · BRIEF DE
+                    MARCA</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-8 my-auto items-center">
+                <div class="col-span-12 lg:col-span-5 space-y-4">
+                    <span class="font-mono text-xs text-siena uppercase tracking-[0.2em] font-medium block">FUNDAMENTO
+                        DEL DIAGNÓSTICO</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-tinta leading-snug">
+                        ¿Qué es el Brief de Marca y cuál es su función clínica?
+                    </h2>
+                    <div class="w-12 h-0.5 bg-siena"></div>
+                    <p class="text-sm text-tinta/80 leading-relaxed font-normal">
+                        El Brief de Marca no es un cuestionario pasivo ni un compendio de intenciones abstractas.
+                        Representa la toma de pulso inicial: la radiografía clínica y certera que despoja al negocio de
+                        su caos operativo inmediato para comprender su verdad estructural.
+                    </p>
+                    <p class="text-xs text-tinta/70 leading-relaxed font-normal">
+                        Define el <strong class="font-semibold text-tinta">«QUÉ»</strong> elemental de la organización:
+                        la actividad medular, las fricciones reales del cliente ideal y las coordenadas sobre las cuales
+                        se diseñará el sistema de servicio y hospitalidad.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-1">PILAR
+                                A</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Diagnóstico de Trinchera</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Escuchar antes de intervenir. Comprender que el problema aparente rara vez es el cuello
+                                de botella estructural del negocio.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">OBSERVACIÓN
+                            CLÍNICA</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block mb-1">PILAR
+                                B</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">El Sujeto Humano</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Las empresas no funcionan por inercia de tablas: funcionan por personas que necesitan
+                                contención, claridad y herramientas operativas.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">DIMENSIÓN
+                            EMPÁTICA</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-tinta/70 uppercase tracking-widest font-semibold block mb-1">PILAR
+                                C</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Criterio sobre Fórmulas</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Rechazo activo a las recetas mágicas de gurús. Cada empresa requiere un traje operativo
+                                hecho a medida de su idiosincrasia.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">RIGOR
+                            METODOLÓGICO</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-1">PILAR
+                                D</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Hospitalidad Rentable</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Demostrar que el buen trato, el respeto estético y la rentabilidad comercial son
+                                engranajes solidarios de un mismo motor.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">OBJETIVO
+                            CENTRAL</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE I · DIAGNÓSTICO & ALCANCE</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 02 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 03: VISIÓN GENERAL DEL PROYECTO & DESCRIPCIÓN CORTA
+         ============================================================================= -->
+    <div id="p03" class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">03</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">ALCANCE INSTITUCIONAL</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · VISIÓN &
+                    IDENTIDAD</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-8 my-auto">
+                <!-- Visión General -->
+                <div
+                    class="col-span-12 lg:col-span-6 flex flex-col justify-between bg-white/50 border border-piedra p-6 rounded-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-b border-piedra/40 pb-2">
+                            <span class="font-mono text-xs text-siena uppercase tracking-widest font-semibold">01 ·
+                                VISIÓN GENERAL</span>
+                            <span class="font-mono text-[10px] text-tinta/40 uppercase">GÉNESIS & AUTORÍA</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-tinta mb-4 leading-snug">
+                            Compromiso directo, respaldo empírico y mirada curatorial.
+                        </h3>
+                        <p class="text-xs sm:text-sm text-tinta/80 leading-relaxed mb-4">
+                            GDB Studio nace del compromiso de su fundador, Glodier Dario Biedma, estableciendo un
+                            respaldo empírico directo. Es una consultora boutique B2B que asume un rol de curador
+                            clínico y estructurador operativo para negocios en expansión.
+                        </p>
+                        <p class="text-xs text-tinta/70 leading-relaxed">
+                            No terceriza su mirada ni aplica manuales prefabricados. Interviene como un socio de
+                            pensamiento que desciende a la trinchera para poner orden y devolverle la calma directiva al
+                            líder del negocio.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-piedra/40 flex items-center justify-between font-mono text-[10px] text-tinta/60">
+                        <span>MODELO: CONSULTORÍA BOUTIQUE</span>
+                        <span class="text-olivo font-medium">AUTORÍA PERSONAL: G.D.B.</span>
+                    </div>
+                </div>
+
+                <div
+                    class="col-span-12 lg:col-span-6 flex flex-col justify-between bg-white/50 border border-piedra p-6 rounded-sm border-l-4 border-l-siena">
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-b border-piedra/40 pb-2">
+                            <span class="font-mono text-xs text-siena uppercase tracking-widest font-semibold">02 ·
+                                DEFINICIÓN NUCLEAR</span>
+                            <span class="font-mono text-[10px] text-tinta/40 uppercase">ELEVATOR PITCH</span>
+                        </div>
+                        <h3 class="font-serif text-2xl text-tinta mb-4 leading-snug">
+                            El puente entre la hospitalidad y la eficiencia autónoma.
+                        </h3>
+                        <div class="p-4 bg-lienzo border border-piedra rounded-sm mb-4">
+                            <p class="font-serif italic text-base sm:text-lg text-tinta leading-relaxed">
+                                «GDB Studio es la única consultora de negocios que diseña sistemas operativos basados en
+                                la hospitalidad para emprendedores que necesitan transformar su atención y liderazgo sin
+                                perder su esencia humana.»
+                            </p>
+                        </div>
+                        <p class="text-xs text-tinta/70 leading-relaxed">
+                            Esta propuesta erradica la falsa dicotomía corporativa entre orden rígido y trato sensible.
+                            El sistema sostiene la estructura para que las relaciones humanas florezcan de forma
+                            rentable.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-6 pt-4 border-t border-piedra/40 flex items-center justify-between font-mono text-[10px] text-tinta/60">
+                        <span>TERRITORIO: ESPACIO INTERMEDIO</span>
+                        <span class="text-siena font-medium">TRATO DIRECTO EN «VOS»</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE I · DEFINICIÓN DEL NEGOCIO</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 03 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 04: SERVICIOS DE LA MARCA & PÚBLICO OBJETIVO
+         ============================================================================= -->
+    <div id="p04" class="brand-sheet sheet-dense">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">04</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">OFERTA DE VALOR &
+                        AUDIENCIA</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · OPERACIÓN &
+                    TARGET</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto items-start">
+                <!-- Bloque Servicios (5 fases de acompañamiento) -->
+                <div class="col-span-12 lg:col-span-7 space-y-3">
+                    <div class="border-b border-piedra/60 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">METODOLOGÍA
+                            EN 5 ETAPAS</span>
+                        <h3 class="font-serif text-xl text-tinta">Servicios y formas de acompañamiento</h3>
+                        <p class="text-[11px] text-tinta/70 mt-0.5">
+                            Consultoría, asesoramiento y capacitación mediante proyectos de transformación y horas de
+                            servicio estratégico.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <!-- 1. Pensar -->
+                        <div class="flex items-start gap-3 bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span
+                                class="font-mono text-xs font-bold text-siena bg-siena/10 px-2 py-0.5 rounded">01</span>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta">Pensar</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Observamos el entorno en silencio y elaboramos un diagnóstico clínico certero para
+                                    entender el problema de fondo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Dar forma -->
+                        <div class="flex items-start gap-3 bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span
+                                class="font-mono text-xs font-bold text-olivo bg-olivo/10 px-2 py-0.5 rounded">02</span>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta">Dar forma</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Estructuramos procesos y diseñamos herramientas prácticas enfocadas en la
+                                    organización y experiencia del cliente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Producir -->
+                        <div class="flex items-start gap-3 bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span
+                                class="font-mono text-xs font-bold text-tinta bg-tinta/10 px-2 py-0.5 rounded">03</span>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta">Producir</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Bajamos a la trinchera operativa para implementar metodologías con criterio
+                                    pragmático e integrador.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Lanzar -->
+                        <div class="flex items-start gap-3 bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span
+                                class="font-mono text-xs font-bold text-siena bg-siena/10 px-2 py-0.5 rounded">04</span>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta">Lanzar</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Implementamos sistemas donde la eficiencia operativa no es enemiga de la
+                                    sensibilidad y la empatía humana.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 5. Acompañar -->
+                        <div class="flex items-start gap-3 bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span
+                                class="font-mono text-xs font-bold text-olivo bg-olivo/10 px-2 py-0.5 rounded">05</span>
+                            <div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta">Acompañar</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Contenemos al líder y a su equipo, entendiendo que las personas son el verdadero
+                                    motor de los negocios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-2.5 bg-siena/10 border-l-2 border-siena rounded-r text-[11px] text-tinta/90 font-serif italic">
+                        «Nosotros ordenamos la estructura operativa para que vos puedas volver a abrazar a las
+                        personas.»
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-5 bg-white/50 border border-piedra p-5 rounded-sm space-y-4">
+                    <div class="border-b border-piedra/40 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block">PERFIL
+                            & AUDIENCIA</span>
+                        <h3 class="font-serif text-xl text-tinta">Público Objetivo · Cliente Ideal</h3>
+                        <p class="text-[11px] text-tinta/70 mt-1">
+                            Emprendedores, líderes y dueños de negocios en fase de expansión que buscan una
+                            transformación de fondo en su gestión operativa.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-xs text-tinta/80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                            <span>Emprendedores que necesitan claridad para ordenar su intuición.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-tinta/80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                            <span>Empresas boutique que buscan un trato consultivo medio-alto.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-tinta/80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                            <span>Líderes abrumados por la trinchera diaria de sus procesos.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-tinta/80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                            <span>Equipos que rechazan la estandarización fría y las fórmulas de gurús.</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-tinta/80">
+                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                            <span>Negocios que desean vincular rentabilidad comercial con buen trato.</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-piedra/40 pt-3">
+                        <span class="font-mono text-[9px] uppercase tracking-wider text-tinta/50 block mb-1">CONDICIÓN
+                            CLAVE</span>
+                        <p class="text-xs text-tinta/85 font-medium leading-relaxed">
+                            Clientes que valoran la observación real y las herramientas prácticas por sobre la teoría
+                            abstracta.
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE I · SERVICIOS & PÚBLICO OBJETIVO</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 04 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 05: PROPÓSITO, VALORES & TONO DE VOZ
+         ============================================================================= -->
+    <div id="p05" class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">05</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">COLUMNA VERTEBRAL</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · PROPÓSITO,
+                    VALORES & TONO</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto">
+                <!-- Columna Izquierda: Propósito & Valores -->
+                <div class="col-span-12 lg:col-span-5 space-y-4">
+                    <!-- Propósito -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm border-l-4 border-l-siena">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block mb-1">PROPÓSITO
+                            DE MARCA</span>
+                        <p class="font-serif text-base text-tinta leading-snug">
+                            «Transformar negocios humanizando sus procesos, demostrando que la rentabilidad y el buen
+                            trato son piezas del mismo motor.»
+                        </p>
+                    </div>
+
+                    <!-- Valores Operativos -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-3">VALORES
+                            OPERATIVOS</span>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">1</span>
+                                <span class="font-medium text-tinta">Hospitalidad</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">2</span>
+                                <span class="font-medium text-tinta">Humildad</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">3</span>
+                                <span class="font-medium text-tinta">Integridad</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">4</span>
+                                <span class="font-medium text-tinta">Criterio práctico</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">5</span>
+                                <span class="font-medium text-tinta">Cuidado humano</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2 bg-lienzo rounded border border-piedra/50">
+                                <span class="font-mono text-siena font-bold">6</span>
+                                <span class="font-medium text-tinta">Claridad operativa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tono de Voz y Matriz Verbal -->
+                <div class="col-span-12 lg:col-span-7 bg-white/50 border border-piedra p-5 rounded-sm space-y-4">
+                    <div class="border-b border-piedra/40 pb-2 flex justify-between items-baseline">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">PERSONALIDAD
+                                VERBAL</span>
+                            <h3 class="font-serif text-xl text-tinta">Tono de Voz · La Voz de GDB Studio</h3>
+                        </div>
+                        <span class="font-mono text-xs px-2 py-0.5 bg-tinta text-lienzo rounded">Tratamiento: Vos</span>
+                    </div>
+
+                    <p class="text-xs text-tinta/80 leading-relaxed">
+                        La marca habla como trabaja: con la pausa reflexiva del <strong>Sabio</strong> y la empatía
+                        receptiva del <strong>Cuidador</strong>, combinando un rigor clínico que acoge y orienta.
+                    </p>
+
+                    <!-- Rasgos y Cómo se expresa -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="space-y-1.5">
+                            <span
+                                class="font-mono text-[9px] text-tinta/50 uppercase tracking-widest block font-medium">RASGOS
+                                CLAVE</span>
+                            <ul class="space-y-1 text-tinta/85">
+                                <li class="flex items-center gap-1.5">· Clínico pero no distante</li>
+                                <li class="flex items-center gap-1.5">· Acogedor pero no informal</li>
+                                <li class="flex items-center gap-1.5">· Criterioso y directo</li>
+                                <li class="flex items-center gap-1.5">· Seguro pero no autoritario</li>
+                                <li class="flex items-center gap-1.5">· Pragmático y asertivo</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <span
+                                class="font-mono text-[9px] text-tinta/50 uppercase tracking-widest block font-medium">CÓMO
+                                SE EXPRESA</span>
+                            <ul class="space-y-1 text-tinta/85">
+                                <li class="flex items-center gap-1.5">· Frases simples con ritmo y asertividad</li>
+                                <li class="flex items-center gap-1.5">· Cero promesas de fórmulas mágicas</li>
+                                <li class="flex items-center gap-1.5">· Preguntas agudas tras escuchar en silencio</li>
+                                <li class="flex items-center gap-1.5">· Trato en «vos» para mantener paridad</li>
+                                <li class="flex items-center gap-1.5">· Libre de tecnicismos vacíos y jerga corporativa
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Citas de Ejemplo -->
+                    <div class="border-t border-piedra/40 pt-3 space-y-1.5">
+                        <span
+                            class="font-mono text-[9px] text-tinta/50 uppercase tracking-widest block font-medium">EJEMPLOS
+                            DE VOZ EN TRINCHERA</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] font-serif italic text-tinta/90">
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">«Primero entendamos qué está
+                                pasando.»</div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">«Cada negocio es diferente. La
+                                solución también.»</div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">«Muchas veces el problema que se
+                                ve no es el verdadero problema.»</div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">«Las personas hacen funcionar los
+                                negocios.»</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE I · IDENTIDAD VERBAL & CULTURA</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 05 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 06: DIFERENCIAL, EMOCIONES, ACTIVOS & OBJETIVOS
+         ============================================================================= -->
+    <div id="p06" class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">06</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">DIAGNÓSTICO
+                        ESTRATÉGICO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · CIERRE DEL
+                    BRIEF</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-5 my-auto">
+                <!-- Columna Izquierda: Diferencial & Emociones -->
+                <div class="col-span-12 lg:col-span-6 space-y-4">
+                    <!-- Diferencial -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <span
+                                class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">DIFERENCIAL
+                                DE MARCA</span>
+                            <span class="font-mono text-[9px] text-tinta/40 uppercase">¿POR QUÉ ES DISTINTO?</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-tinta/85">
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-siena font-bold">·</span>
+                                <span>No imponemos fórmulas rígidas; diagnosticamos con la trinchera real en
+                                    mente.</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-siena font-bold">·</span>
+                                <span>Ocupamos el espacio entre la consultoría corporativa fría y el coaching sin
+                                    herramientas.</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-siena font-bold">·</span>
+                                <span>Unimos la precisión geométrica de los datos con la calidez del trato
+                                    humano.</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-siena font-bold">·</span>
+                                <span>Diseño de minimalismo editorial cálido: organiza sin abrumar.</span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-siena font-bold">·</span>
+                                <span>Entendemos que la rentabilidad depende de la hospitalidad y del servicio.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Emociones a Despertar -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-2">ARQUITECTURA
+                            EMOCIONAL</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-[11px]">
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Tranquilidad</span>
+                                <span class="text-[10px] text-tinta/60">Procesos bajo control claro.</span>
+                            </div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Seguridad</span>
+                                <span class="text-[10px] text-tinta/60">Diagnóstico certero y clínico.</span>
+                            </div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Pertenencia</span>
+                                <span class="text-[10px] text-tinta/60">Contención de aliado empático.</span>
+                            </div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Claridad</span>
+                                <span class="text-[10px] text-tinta/60">Herramientas tangibles.</span>
+                            </div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Calma activa</span>
+                                <span class="text-[10px] text-tinta/60">Avance sin caos operativo.</span>
+                            </div>
+                            <div class="p-2 bg-lienzo rounded border border-piedra/40">
+                                <span class="font-semibold text-tinta block">Respeto estético</span>
+                                <span class="text-[10px] text-tinta/60">Diseño editorial calibrado.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Activos Existentes & Objetivos -->
+                <div class="col-span-12 lg:col-span-6 space-y-4">
+                    <!-- Elementos Existentes -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm">
+                        <span
+                            class="font-mono text-[10px] text-tinta/70 uppercase tracking-widest font-semibold block mb-2">ACTIVOS
+                            EXISTENTES CONSOLIDADOS</span>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-tinta/80">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Nombre: GDB Studio</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Imagotipo: Propuesta B</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Paleta: 5 colores editoriales</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Fuentes: DM Serif, DM Sans, JetBrains</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Tono de voz: Clínico en «vos»</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                <span>Sistema de modos de aplicación</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Objetivos por Plazos -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm space-y-3">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">HOJA
+                            DE RUTA OPERATIVA</span>
+
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span
+                                    class="font-mono text-[9px] px-1.5 py-0.5 bg-siena/10 text-siena font-semibold uppercase rounded">Corto
+                                    Plazo</span>
+                                <span class="text-[10px] text-tinta/50 font-mono">Consolidación e Identidad</span>
+                            </div>
+                            <ul class="text-[11px] text-tinta/80 space-y-0.5 pl-2">
+                                <li>· Presentar Dossier Maestro y Brand Book definitivo.</li>
+                                <li>· Consolidar reglas cromáticas y tipográficas en Manual de Marca.</li>
+                                <li>· Documentar lock-ups y usos incorrectos del imagotipo.</li>
+                                <li>· Organizar grilla de redes: «El plano arquitectónico habitado».</li>
+                                <li>· Lanzar primeros soportes impresos corporativos sobre papel táctil.</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-piedra/40 pt-2">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span
+                                    class="font-mono text-[9px] px-1.5 py-0.5 bg-olivo/10 text-olivo font-semibold uppercase rounded">Mediano
+                                    Plazo</span>
+                                <span class="text-[10px] text-tinta/50 font-mono">Expansión & Autoridad</span>
+                            </div>
+                            <ul class="text-[11px] text-tinta/80 space-y-0.5 pl-2">
+                                <li>· Establecer cadencia en redes con alternancia de silencios visuales.</li>
+                                <li>· Posicionarse como referente de sistemas operativos de hospitalidad.</li>
+                                <li>· Generar casos de estudio que demuestren rentabilidad y buen trato.</li>
+                                <li>· Desarrollar herramientas digitales y dashboards UI correspondientes.</li>
+                                <li>· Afianzar alianzas estratégicas en el mercado de servicios B2B en Argentina.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-siena"></span>
+                    <span>FIN DE LA PARTE I: BRIEF DE MARCA & DIAGNÓSTICO</span>
+                </div>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 06 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PARTE II: ESTRATEGIA DIRECTIVA & SISTEMA VISUAL (PÁGINAS 07 A 19)
+         ============================================================================= -->
+
+    <!-- =============================================================================
+         PÁGINA 07: PORTADA / HERO BANNER DE ESTRATEGIA (MODO INVERSO / DARK TINTA)
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-tinta text-lienzo relative overflow-hidden">
+            <!-- Filigrana abstracta sutil -->
+            <div class="absolute -right-24 -bottom-24 pointer-events-none opacity-[0.04]">
+                <svg width="680" height="680" viewBox="0 0 100 100" fill="none" stroke="#F4F1EA" stroke-width="0.5">
+                    <circle cx="50" cy="50" r="46" />
+                    <circle cx="50" cy="28" r="28" />
+                    <circle cx="50" cy="72" r="28" />
+                    <circle cx="28" cy="50" r="28" />
+                    <circle cx="72" cy="50" r="28" />
+                </svg>
+            </div>
+
+            <!-- Header Técnico Modo Inverso -->
+            <header class="border-b border-lienzo/20 pb-3 flex justify-between items-end">
+                <div>
+                    <span class="font-mono text-[10px] tracking-[0.2em] text-siena uppercase font-semibold block">GLOB
+                        STUDIO · FASE 6</span>
+                    <h2 class="font-mono text-xs uppercase tracking-wider text-lienzo/80 mt-0.5">ESTRATEGIA DIRECTIVA &
+                        SISTEMA VISUAL</h2>
+                </div>
+                <div class="text-right font-mono text-[10px] text-lienzo/60 tracking-wider">
+                    <span>DOCUMENTO MAESTRO</span> · <span class="text-siena font-semibold">PARTE II</span>
+                </div>
+            </header>
+
+            <!-- Main Hero Estrategia -->
+            <main class="grid grid-cols-12 gap-8 items-center py-4 my-auto">
+                <div class="col-span-12 lg:col-span-8 flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 mb-4">
+                        <span class="w-2.5 h-2.5 rounded-full bg-siena animate-pulse"></span>
+                        <span class="font-mono text-xs uppercase tracking-[0.25em] text-piedra font-semibold">SISTEMA
+                            INTEGRAL DE MARCA · BLOQUE DIRECTIVO</span>
+                    </div>
+                    <div class="mb-5 py-1">
+                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro2.png"
+                            alt="GDB Studio" class="h-20 sm:h-28 lg:h-32 w-auto object-contain">
+                    </div>
+                    <h1
+                        class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-lienzo tracking-tight mb-4">
+                        Estrategia & Sistema
+                    </h1>
+                    <p class="font-serif italic text-xl lg:text-2xl text-siena max-w-2xl leading-relaxed mb-5">
+                        «El sistema organiza los datos, pero las texturas y el aire abrazan a la persona.»
+                    </p>
+                    <p class="text-sm sm:text-base text-lienzo/75 max-w-xl font-normal leading-relaxed">
+                        Despliegue normativo, fundamentos de posicionamiento, matriz verbal y gobernanza visual para la
+                        escala institucional de GDB Studio.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-4 border-l border-lienzo/20 pl-8 space-y-4">
+                    <div class="border-b border-lienzo/15 pb-3">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block">Entidad
+                            Corporativa</span>
+                        <span class="font-serif text-lg text-lienzo">GDB Studio</span>
+                        <span class="font-mono text-xs text-lienzo/60 block mt-0.5">Fundador: Glodier Dario
+                            Biedma</span>
+                    </div>
+
+                    <div class="border-b border-lienzo/15 pb-3">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block">Arquetipos
+                            Nucleares</span>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span
+                                class="px-2 py-0.5 bg-lienzo/10 text-lienzo font-mono text-xs rounded border border-lienzo/20">El
+                                Sabio (Primario)</span>
+                            <span
+                                class="px-2 py-0.5 bg-siena/20 text-siena font-mono text-xs rounded border border-siena/30">El
+                                Cuidador</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 border-b border-lienzo/15 pb-3">
+                        <div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block">Modo
+                                Operativo</span>
+                            <span class="text-xs font-mono text-lienzo">Evento / Inverso</span>
+                        </div>
+                        <div>
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block">Alcance</span>
+                            <span class="text-xs font-mono text-lienzo">Láminas 07 a 19</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-1">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block mb-1">Dirección
+                            de Arte</span>
+                        <span class="font-mono text-xs text-lienzo/80">Minimalismo Editorial Cálido · Glob Studio</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer Modo Inverso -->
+            <footer
+                class="border-t border-lienzo/20 pt-3 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-lienzo/60 gap-2">
+                <div class="flex items-center gap-4">
+                    <span>GDB-STUDIO-DOC-02</span>
+                    <span class="text-lienzo/30">|</span>
+                    <span>CONFIDENCIAL & EXCLUSIVO</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 07 / 19</span>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 08: TARJETA INTRODUCTORIA · ¿QUÉ ES LA ESTRATEGIA DE MARCA?
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">08</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">MARCO ESTRATÉGICO
+                        DIRECTIVO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · EL CÓMO DEL
+                    SISTEMA</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-8 my-auto items-center">
+                <div class="col-span-12 lg:col-span-5 space-y-4">
+                    <span class="font-mono text-xs text-siena uppercase tracking-[0.2em] font-medium block">EL MOTOR
+                        DIRECTIVO</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-tinta leading-snug">
+                        ¿Qué es la Estrategia de Marca y cuál es su función?
+                    </h2>
+                    <div class="w-12 h-0.5 bg-siena"></div>
+                    <p class="text-sm text-tinta/80 leading-relaxed font-normal">
+                        Si el Brief consolidó el <strong class="text-tinta font-semibold">«QUÉ»</strong> elemental del
+                        negocio, la Estrategia de Marca formaliza el <strong
+                            class="text-siena font-semibold">«CÓMO»</strong> directivo: el relato, la postura y el
+                        sistema operativo que sostienen el valor comercial sin diluir el alma de la organización.
+                    </p>
+                    <p class="text-xs text-tinta/70 leading-relaxed font-normal">
+                        La estrategia transforma una serie de buenas intenciones en un método riguroso y transferible,
+                        permitiendo a GDB Studio gobernar cada punto de contacto con solvencia clínica y genuina
+                        cercanía humana.
+                    </p>
+                </div>
+
+                <div class="col-span-12 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-1">DIMENSIÓN
+                                01</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Relato Coherente</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Un discurso unificado que erradica la improvisación y traduce la trinchera del cliente
+                                en claridad conceptual tangible.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">NARRATIVA
+                            DIRECTIVA</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block mb-1">DIMENSIÓN
+                                02</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Gobernanza de Conducta</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Normas claras de lenguaje, decisiones operativas y límites verbales que preservan la
+                                integridad de la firma.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">CRITERIO
+                            OPERATIVO</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-tinta/70 uppercase tracking-widest font-semibold block mb-1">DIMENSIÓN
+                                03</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Diferenciación Real</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Consolidación en el espacio intermedio entre la consultoría fría despersonalizada y el
+                                coaching sin método técnico.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">NICHO
+                            BOUTIQUE</span>
+                    </div>
+
+                    <div class="bg-white/60 border border-piedra p-5 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block mb-1">DIMENSIÓN
+                                04</span>
+                            <h3 class="font-serif text-lg text-tinta mb-2">Estructura Escalable</h3>
+                            <p class="text-xs text-tinta/75 leading-relaxed">
+                                Un sistema visual y metodológico concebido para crecer, asegurando que el buen trato sea
+                                el motor directo de la rentabilidad.
+                            </p>
+                        </div>
+                        <span class="font-mono text-[9px] text-tinta/40 tracking-wider uppercase mt-4 block">EFICIENCIA
+                            AUTÓNOMA</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · ESTRATEGIA DIRECTIVA</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 08 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 09: RESUMEN EJECUTIVO & PROPÓSITO DE MARCA (MANIFIESTO)
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">09</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">NARRATIVA DIRECTIVA</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · MANIFIESTO &
+                    PROPÓSITO</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto items-start">
+                <!-- Columna Izquierda: Resumen Ejecutivo y Síntesis -->
+                <div class="col-span-12 lg:col-span-5 space-y-4">
+                    <div class="border-b border-piedra/60 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">SÍNTESIS
+                            ESTRATÉGICA</span>
+                        <h3 class="font-serif text-2xl text-tinta">Resumen Ejecutivo</h3>
+                    </div>
+
+                    <div class="p-4 bg-white/60 border border-piedra rounded-sm">
+                        <p class="text-xs sm:text-sm text-tinta/85 leading-relaxed">
+                            GDB Studio se posiciona como una consultora B2B boutique que opera bajo la dualidad del
+                            arquetipo <strong>Sabio</strong> y <strong>Cuidador</strong>. Su estrategia se basa en
+                            diagnosticar clínicamente las operaciones empresariales para luego implementar sistemas con
+                            una estética de minimalismo editorial cálido, garantizando que el orden operativo eleve la
+                            hospitalidad humana.
+                        </p>
+                    </div>
+
+                    <div class="p-4 bg-olivo/10 border-l-4 border-olivo rounded-r space-y-1">
+                        <span
+                            class="font-mono text-[9px] uppercase tracking-widest text-olivo font-bold block">PROPÓSITO
+                            DESTACADO</span>
+                        <p class="text-xs text-tinta/90 leading-relaxed font-serif italic">
+                            «Transformar negocios humanizando sus procesos, demostrando que la rentabilidad y el buen
+                            trato son piezas exactas del mismo motor. No imponemos fórmulas estandarizadas; diseñamos
+                            sistemas operativos basados en la hospitalidad para quienes necesitan escalar sin perder su
+                            esencia humana.»
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between text-[11px] font-mono text-tinta/60 p-2 bg-piedra/30 rounded">
+                        <span>TAGLINE MAESTRO</span>
+                        <strong class="text-tinta">«Estructura empática para negocios humanos.»</strong>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Manifiesto Institucional en Caja Pergamino -->
+                <div
+                    class="col-span-12 lg:col-span-7 bg-white/70 border border-piedra p-6 rounded-sm space-y-4 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-piedra/60 pb-2">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-siena font-semibold">EL
+                            MANIFIESTO INSTITUCIONAL</span>
+                        <span class="font-mono text-[9px] text-tinta/50 uppercase">DOCUMENTO FUNDACIONAL</span>
+                    </div>
+
+                    <div class="space-y-3 font-serif text-xs sm:text-sm text-tinta/85 leading-relaxed">
+                        <p>
+                            Llegamos a la reunión, nos sentamos y primero observamos el entorno en silencio. Escuchamos
+                            antes de intervenir, porque sabemos que muchas veces el problema que se ve a simple vista no
+                            es el verdadero problema.
+                        </p>
+                        <p>
+                            En GDB Studio no creemos en fórmulas mágicas, gurús corporativos ni en estandarizaciones
+                            frías que le quitan el alma a las empresas. Creemos en el diagnóstico certero, en la pausa
+                            lúcida y en el diseño de sistemas operativos basados en la hospitalidad real. Tu negocio no
+                            funciona por la inercia de sus tablas: funciona por las personas que lo operan todos los
+                            días.
+                        </p>
+                        <p>
+                            Transformamos la intuición desordenada en una cultura de servicio y eficiencia autónoma.
+                            Demostramos que la rentabilidad comercial y el trato humano impecable son piezas del mismo
+                            motor. Nuestro rigor es clínico; nuestro abrazo, genuino.
+                        </p>
+                    </div>
+
+                    <div
+                        class="border-t border-piedra/60 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                        <span class="font-mono text-[11px] text-siena font-medium tracking-tight">
+                            «Estructura empática: la precisión geométrica al servicio de la calidez humana.»
+                        </span>
+                        <span class="font-mono text-[9px] uppercase px-2 py-0.5 bg-tinta text-lienzo rounded">GDB STUDIO
+                            · 2026</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · RESUMEN EJECUTIVO & MANIFIESTO</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 09 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 10: MISIÓN, VISIÓN & PROMESA DE MARCA
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">10</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">RUMBO & COMPROMISO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · MISIÓN, VISIÓN
+                    & PROMESA</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto">
+                <!-- Tarjeta Misión -->
+                <div
+                    class="col-span-12 lg:col-span-4 bg-white/60 border border-piedra p-6 rounded-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-piedra/40 pb-2 mb-3">
+                            <span class="font-mono text-xs font-bold text-siena uppercase tracking-widest">01 ·
+                                MISIÓN</span>
+                            <span
+                                class="px-2 py-0.5 bg-siena/10 text-siena font-mono text-[9px] uppercase rounded">Acción
+                                Cotidiana</span>
+                        </div>
+                        <h3 class="font-serif text-xl text-tinta mb-3">Acompañar y dotar de herramientas prácticas</h3>
+                        <p class="text-xs sm:text-sm text-tinta/80 leading-relaxed">
+                            Acompañar a emprendedores y negocios a transformar su funcionamiento aportando diagnóstico
+                            certero y herramientas prácticas en organización, hospitalidad y experiencia del cliente.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-piedra/40 font-mono text-[10px] text-tinta/60">
+                        FOCO: DIAGNÓSTICO CERTERO EN TRINCHERA
+                    </div>
+                </div>
+
+                <!-- Tarjeta Visión -->
+                <div
+                    class="col-span-12 lg:col-span-4 bg-white/60 border border-piedra p-6 rounded-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-piedra/40 pb-2 mb-3">
+                            <span class="font-mono text-xs font-bold text-olivo uppercase tracking-widest">02 ·
+                                VISIÓN</span>
+                            <span
+                                class="px-2 py-0.5 bg-olivo/10 text-olivo font-mono text-[9px] uppercase rounded">Horizonte
+                                Futuro</span>
+                        </div>
+                        <h3 class="font-serif text-xl text-tinta mb-3">Referente de culturas de servicio en expansión
+                        </h3>
+                        <p class="text-xs sm:text-sm text-tinta/80 leading-relaxed">
+                            Convertirse en la consultora referente en el desarrollo de culturas de servicio y excelencia
+                            operativa para negocios en expansión.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-piedra/40 font-mono text-[10px] text-tinta/60">
+                        HORIZONTE: LIDERAZGO BOUTIQUE B2B
+                    </div>
+                </div>
+
+                <!-- Tarjeta Promesa -->
+                <div
+                    class="col-span-12 lg:col-span-4 bg-white/60 border border-piedra p-6 rounded-sm flex flex-col justify-between border-l-4 border-l-tinta">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-piedra/40 pb-2 mb-3">
+                            <span class="font-mono text-xs font-bold text-tinta uppercase tracking-widest">03 ·
+                                PROMESA</span>
+                            <span class="px-2 py-0.5 bg-tinta text-lienzo font-mono text-[9px] uppercase rounded">Pacto
+                                Inquebrantable</span>
+                        </div>
+                        <h3 class="font-serif text-xl text-tinta mb-3">Tranquilidad y seguridad mediante método claro
+                        </h3>
+                        <p class="text-xs sm:text-sm text-tinta/80 leading-relaxed font-serif italic">
+                            «Acompañarte a transformar tu negocio aportando herramientas prácticas y un diagnóstico
+                            certero, garantizándote siempre la tranquilidad y seguridad de un método claro.»
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-piedra/40 font-mono text-[10px] text-siena font-medium">
+                        PACTO: CERTEZA DIRECTIVA SIN AMBIGÜEDAD
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · MISIÓN, VISIÓN & PROMESA</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 10 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 11: PILARES DE MARCA & POSICIONAMIENTO DE MERCADO
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">11</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">ARQUITECTURA
+                        ESTRATÉGICA</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · PILARES &
+                    POSICIONAMIENTO</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="space-y-4 my-auto">
+                <!-- Infografía 5 Pilares -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">COLUMNAS
+                            ESTRUCTURALES</span>
+                        <span class="font-mono text-[9px] text-tinta/40 uppercase">METODOLOGÍA DIRECTIVA</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                        <!-- Pilar 01 -->
+                        <div class="bg-white/60 border border-piedra p-4 rounded-sm flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-7 h-7 rounded-full bg-siena/15 text-siena font-mono text-xs font-bold flex items-center justify-center mb-2">
+                                    01
+                                </div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta mb-1">Acompañamiento real</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Presencia asertiva, escucha activa en la trinchera y apoyo continuo para ordenar el
+                                    caos.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 block mt-2 pt-2 border-t border-piedra/30">TRINCHERA
+                                HUMANA</span>
+                        </div>
+
+                        <!-- Pilar 02 -->
+                        <div class="bg-white/60 border border-piedra p-4 rounded-sm flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-7 h-7 rounded-full bg-olivo/15 text-olivo font-mono text-xs font-bold flex items-center justify-center mb-2">
+                                    02
+                                </div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta mb-1">Estética con sentido</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Un diseño editorial donde la estructura geométrica organiza la información y el
+                                    espacio abraza a la persona.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 block mt-2 pt-2 border-t border-piedra/30">ORDEN
+                                & SILENCIO</span>
+                        </div>
+
+                        <!-- Pilar 03 -->
+                        <div class="bg-white/60 border border-piedra p-4 rounded-sm flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-7 h-7 rounded-full bg-tinta/10 text-tinta font-mono text-xs font-bold flex items-center justify-center mb-2">
+                                    03
+                                </div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta mb-1">Procesos personalizados
+                                </h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Soluciones clínicas adaptadas al contexto humano, rechazando las fórmulas
+                                    universales ineficaces.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 block mt-2 pt-2 border-t border-piedra/30">TRAJE
+                                A MEDIDA</span>
+                        </div>
+
+                        <!-- Pilar 04 -->
+                        <div class="bg-white/60 border border-piedra p-4 rounded-sm flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-7 h-7 rounded-full bg-siena/15 text-siena font-mono text-xs font-bold flex items-center justify-center mb-2">
+                                    04
+                                </div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta mb-1">Producción consciente</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Desarrollo de herramientas operativas prácticas que evitan el abrumamiento y
+                                    facilitan la ejecución.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 block mt-2 pt-2 border-t border-piedra/30">CERO
+                                FRICCIÓN</span>
+                        </div>
+
+                        <!-- Pilar 05 -->
+                        <div class="bg-white/60 border border-piedra p-4 rounded-sm flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-7 h-7 rounded-full bg-olivo/15 text-olivo font-mono text-xs font-bold flex items-center justify-center mb-2">
+                                    05
+                                </div>
+                                <h4 class="font-serif text-sm font-semibold text-tinta mb-1">Claridad como base</h4>
+                                <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                    Criterio pragmático para transformar la intuición desordenada en una eficiencia
+                                    autónoma y tangible.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 block mt-2 pt-2 border-t border-piedra/30">RIGOR
+                                PRÁCTICO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posicionamiento de Mercado -->
+                <div class="bg-white/50 border border-piedra p-4 rounded-sm">
+                    <div class="flex items-center justify-between border-b border-piedra/40 pb-2 mb-2">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold">POSICIONAMIENTO
+                            DIRECTIVO DE MERCADO</span>
+                        <span class="font-mono text-[10px] px-2 py-0.5 bg-piedra/40 text-tinta rounded">ESPACIO
+                            INTERMEDIO BOUTIQUE</span>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 items-center">
+                        <div class="col-span-12 lg:col-span-8">
+                            <p class="font-serif text-sm sm:text-base text-tinta leading-relaxed">
+                                «El aliado estratégico que transforma la intuición desordenada en una cultura de
+                                hospitalidad, servicio y eficiencia autónoma, ocupando el nicho boutique intermedio
+                                entre la consultoría fría y el coaching vacío.»
+                            </p>
+                        </div>
+                        <div
+                            class="col-span-12 lg:col-span-4 border-l border-piedra/50 pl-4 space-y-1 text-xs text-tinta/75">
+                            <div class="flex items-center gap-1.5"><span
+                                    class="w-1.5 h-1.5 bg-siena rounded-full"></span><span>Rechazo activo al coaching
+                                    sin herramientas.</span></div>
+                            <div class="flex items-center gap-1.5"><span
+                                    class="w-1.5 h-1.5 bg-siena rounded-full"></span><span>Superación de la fría
+                                    estandarización corporativa.</span></div>
+                            <div class="flex items-center gap-1.5"><span
+                                    class="w-1.5 h-1.5 bg-siena rounded-full"></span><span>Ticket de valor medio-alto
+                                    basado en proyectos.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · PILARES & POSICIONAMIENTO</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 11 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 12: VALORES DE LA MARCA & GOBERNANZA VERBAL (SÍ / NUNCA DIRÍA)
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">12</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">CONDUCTA & LENGUAJE</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · VALORES &
+                    GOBERNANZA</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-5 my-auto items-start">
+                <!-- Columna Izquierda: 6 Valores Estratégicos -->
+                <div class="col-span-12 lg:col-span-6 space-y-2.5">
+                    <div class="border-b border-piedra/60 pb-1 flex justify-between items-baseline">
+                        <span class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">VALORES
+                            OPERATIVOS</span>
+                        <span class="font-mono text-[9px] text-tinta/40 uppercase">6 PRINCIPIOS DE ACCIÓN</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-siena">01 · Criterio</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Capacidad clínica y analítica para diagnosticar
+                                más allá del síntoma superficial.</p>
+                        </div>
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-siena">02 · Cuidado</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Protección activa del bienestar humano y emocional
+                                de los equipos de trabajo.</p>
+                        </div>
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-olivo">03 · Dirección</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Liderazgo firme mediante herramientas y sistemas
+                                que aportan un rumbo certero.</p>
+                        </div>
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-olivo">04 · Escucha activa</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Hábito inquebrantable de observar el entorno antes
+                                de dictar normas.</p>
+                        </div>
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-tinta">05 · Compromiso real</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Involucramiento empírico en la trinchera del
+                                negocio, de punta a punta.</p>
+                        </div>
+                        <div class="bg-white/60 border border-piedra p-2.5 rounded-sm">
+                            <span class="font-mono text-[10px] font-bold text-tinta">06 · Adaptabilidad sensible</span>
+                            <p class="text-[11px] text-tinta/80 mt-1">Inteligencia integradora para ajustar los
+                                estándares a cada idiosincrasia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Matriz Verbal Sí / Nunca Diría & Palabras Clave -->
+                <div class="col-span-12 lg:col-span-6 space-y-3">
+                    <div class="border-b border-piedra/60 pb-1 flex justify-between items-baseline">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold">GOBERNANZA
+                            VERBAL</span>
+                        <span class="font-mono text-[9px] px-2 py-0.5 bg-tinta text-lienzo rounded">TRATAMIENTO:
+                            VOS</span>
+                    </div>
+
+                    <!-- Cuadrícula Sí Diría / Nunca Diría -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px]">
+                        <!-- SÍ DIRÍA -->
+                        <div class="bg-olivo/5 border border-olivo/30 p-3 rounded-sm space-y-2">
+                            <div
+                                class="flex items-center gap-2 text-olivo font-mono text-[10px] font-bold uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-olivo"></span>
+                                <span>SÍ DIRÍA (VOZ CLÍNICA)</span>
+                            </div>
+                            <ul class="space-y-1.5 text-tinta/90 font-serif italic">
+                                <li>«Primero entendamos qué está pasando.»</li>
+                                <li>«Cada negocio es diferente. La solución también.»</li>
+                                <li>«Muchas veces el problema que se ve no es el verdadero problema.»</li>
+                                <li>«No se trata solo de atender, sino de generar una experiencia.»</li>
+                                <li>«Las personas hacen funcionar los negocios.»</li>
+                            </ul>
+                        </div>
+
+                        <!-- NUNCA DIRÍA -->
+                        <div class="bg-red-500/5 border border-red-500/30 p-3 rounded-sm space-y-2">
+                            <div
+                                class="flex items-center gap-2 text-red-700 font-mono text-[10px] font-bold uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-red-600"></span>
+                                <span>NUNCA DIRÍA (PROHIBIDO)</span>
+                            </div>
+                            <ul class="space-y-1.5 text-tinta/80 line-through decoration-red-600/50">
+                                <li>«Tenemos la solución para todo.»</li>
+                                <li>«Esto funciona igual para cualquier negocio.»</li>
+                                <li>«El problema son tus empleados.»</li>
+                                <li>«Siempre se hizo así y punto.»</li>
+                                <li>«Nosotros sabemos exactamente lo que necesitás.»</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Filtro de Palabras Propias vs Prohibidas -->
+                    <div class="grid grid-cols-2 gap-3 pt-1">
+                        <div class="p-2 bg-lienzo border border-piedra rounded text-[11px]">
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-wider text-olivo font-bold block mb-1">LÉXICO
+                                PROPIO</span>
+                            <div class="flex flex-wrap gap-1 font-mono text-[10px] text-tinta">
+                                <span class="px-1.5 py-0.5 bg-white border border-piedra/60 rounded">Hospitalidad</span>
+                                <span class="px-1.5 py-0.5 bg-white border border-piedra/60 rounded">Diagnóstico</span>
+                                <span class="px-1.5 py-0.5 bg-white border border-piedra/60 rounded">Herramientas</span>
+                                <span class="px-1.5 py-0.5 bg-white border border-piedra/60 rounded">Criterio</span>
+                                <span class="px-1.5 py-0.5 bg-white border border-piedra/60 rounded">Experiencia</span>
+                            </div>
+                        </div>
+
+                        <div class="p-2 bg-lienzo border border-piedra rounded text-[11px]">
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-wider text-red-600 font-bold block mb-1">LÉXICO
+                                PROHIBIDO</span>
+                            <div class="flex flex-wrap gap-1 font-mono text-[10px] text-tinta/60">
+                                <span
+                                    class="px-1.5 py-0.5 bg-white border border-red-200 line-through rounded">Fórmula</span>
+                                <span
+                                    class="px-1.5 py-0.5 bg-white border border-red-200 line-through rounded">Gurú</span>
+                                <span
+                                    class="px-1.5 py-0.5 bg-white border border-red-200 line-through rounded">Infalible</span>
+                                <span
+                                    class="px-1.5 py-0.5 bg-white border border-red-200 line-through rounded">Estandarizar</span>
+                                <span
+                                    class="px-1.5 py-0.5 bg-white border border-red-200 line-through rounded">Magia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · VALORES & GOBERNANZA VERBAL</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 12 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 13: DIFERENCIAL ESTRATÉGICO, EMOCIONES Y EXPERIENCIA DE MARCA
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">13</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">VENTAJA & EXPERIENCIA</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · PROPUESTA
+                    DIRECTIVA</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto items-start">
+                <!-- Columna Izquierda: Diferencial Estratégico -->
+                <div class="col-span-12 lg:col-span-6 space-y-3">
+                    <div class="border-b border-piedra/60 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">SISTEMA
+                            DIFERENCIAL</span>
+                        <h3 class="font-serif text-2xl text-tinta">¿Por qué GDB Studio es distinto?</h3>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="p-3 bg-white/60 border border-piedra rounded-sm flex items-start gap-2.5">
+                            <span class="text-siena font-mono font-bold text-xs mt-0.5">·</span>
+                            <p class="text-xs text-tinta/85 leading-relaxed">
+                                Porque no te entregamos manuales teóricos abstractos; bajamos a la trinchera operativa
+                                de tu negocio a observar y escuchar.
+                            </p>
+                        </div>
+                        <div class="p-3 bg-white/60 border border-piedra rounded-sm flex items-start gap-2.5">
+                            <span class="text-siena font-mono font-bold text-xs mt-0.5">·</span>
+                            <p class="text-xs text-tinta/85 leading-relaxed">
+                                Porque nuestra metodología une el rigor clínico de los datos con el cuidado humano y la
+                                contención del líder.
+                            </p>
+                        </div>
+                        <div class="p-3 bg-white/60 border border-piedra rounded-sm flex items-start gap-2.5">
+                            <span class="text-siena font-mono font-bold text-xs mt-0.5">·</span>
+                            <p class="text-xs text-tinta/85 leading-relaxed">
+                                Porque contamos con un sistema de identidad donde cada elemento visual transmite orden,
+                                calma activa y serenidad.
+                            </p>
+                        </div>
+                        <div class="p-3 bg-white/60 border border-piedra rounded-sm flex items-start gap-2.5">
+                            <span class="text-siena font-mono font-bold text-xs mt-0.5">·</span>
+                            <p class="text-xs text-tinta/85 leading-relaxed">
+                                Porque diseñamos herramientas operativas concebidas para disipar el abrumamiento sin
+                                hacer sentir inferior al equipo.
+                            </p>
+                        </div>
+                        <div class="p-3 bg-white/60 border border-piedra rounded-sm flex items-start gap-2.5">
+                            <span class="text-siena font-mono font-bold text-xs mt-0.5">·</span>
+                            <p class="text-xs text-tinta/85 leading-relaxed">
+                                Porque nuestro concepto matriz entiende que el servicio genuino es la vía directa a la
+                                rentabilidad comercial sostenible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-3 bg-siena/10 border-l-4 border-siena rounded-r font-serif italic text-xs text-tinta/90">
+                        «Nos diferenciamos por ser la estructura empática que todo negocio necesita para crecer con el
+                        alma intacta.»
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Emociones a Despertar vs Evitar & Primera Impresión -->
+                <div class="col-span-12 lg:col-span-6 space-y-3">
+                    <div class="border-b border-piedra/60 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block">IMPACTO
+                            PERCEPTIVO</span>
+                        <h3 class="font-serif text-2xl text-tinta">Arquitectura de la Experiencia</h3>
+                    </div>
+
+                    <!-- Primera Impresión Destacada -->
+                    <div class="p-3 bg-white/70 border border-piedra rounded-sm">
+                        <span class="font-mono text-[9px] uppercase tracking-wider text-tinta/50 block mb-1">PRIMERA
+                            IMPRESIÓN PROYECTADA</span>
+                        <p class="font-serif italic text-xs sm:text-sm text-tinta leading-relaxed">
+                            «Por fin hablo con alguien que entiende verdaderamente la trinchera de mi negocio y tiene la
+                            claridad mental para ordenarlo.»
+                        </p>
+                    </div>
+
+                    <!-- Matriz de Emociones Deseadas vs Evitadas -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <!-- Emociones a Despertar -->
+                        <div class="bg-white/60 border border-piedra p-3 rounded-sm space-y-1.5">
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-olivo font-bold block">EMOCIONES
+                                A DESPERTAR</span>
+                            <ul class="space-y-1 text-tinta/85 text-[11px]">
+                                <li class="flex items-center gap-1.5"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-olivo"></span><strong>Tranquilidad:</strong>
+                                    Métodos bajo control.</li>
+                                <li class="flex items-center gap-1.5"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-olivo"></span><strong>Seguridad:</strong>
+                                    Certeza en el diagnóstico.</li>
+                                <li class="flex items-center gap-1.5"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-olivo"></span><strong>Pertenencia:</strong>
+                                    Trato integrador.</li>
+                                <li class="flex items-center gap-1.5"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-olivo"></span><strong>Claridad:</strong>
+                                    Intuición ordenada.</li>
+                                <li class="flex items-center gap-1.5"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-olivo"></span><strong>Respeto
+                                        estético:</strong> Calidad editorial.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Emociones a Evitar -->
+                        <div class="bg-white/60 border border-piedra p-3 rounded-sm space-y-1.5">
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-red-600 font-bold block">EMOCIONES
+                                A ERRADICAR</span>
+                            <ul class="space-y-2 text-tinta/85 text-[11px]">
+                                <li class="p-1.5 bg-red-50 border border-red-200/60 rounded">
+                                    <strong class="text-red-800 block">Abrumamiento:</strong>
+                                    <span>Cero complejidades innecesarias o manuales inabarcables.</span>
+                                </li>
+                                <li class="p-1.5 bg-red-50 border border-red-200/60 rounded">
+                                    <strong class="text-red-800 block">Inferioridad:</strong>
+                                    <span>Cero condescendencia; trato paritario en «vos».</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · DIFERENCIAL & EXPERIENCIA</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 13 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 14: SISTEMA GRÁFICO & CONCEPTO MATRIZ (PLANO ARQUITECTÓNICO & SELLOS)
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">14</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">SISTEMA GRÁFICO &
+                        MATRIZ</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · CONCEPTO
+                    VISUAL</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto items-center">
+                <!-- Columna Izquierda: Concepto Central & Pautas -->
+                <div class="col-span-12 lg:col-span-6 space-y-4">
+                    <div class="border-b border-piedra/60 pb-2">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">CONCEPTO
+                            CENTRAL NATIVO</span>
+                        <h3 class="font-serif text-2xl sm:text-3xl text-tinta">Estructura Empática</h3>
+                        <p class="text-xs text-tinta/70 mt-1 font-serif italic">
+                            «La precisión geométrica al servicio de la calidez humana.»
+                        </p>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-tinta/80 leading-relaxed">
+                        El sistema impone el rigor de un <strong>plano arquitectónico</strong> donde las líneas de cota
+                        y las grillas técnicas organizan la información con sobriedad absoluta. Este orden se equilibra
+                        intencionalmente con la atmósfera envolvente y táctil de un <strong>hotel boutique</strong>.
+                    </p>
+
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-start gap-2 bg-white/60 p-2.5 rounded border border-piedra/60">
+                            <span class="font-mono text-siena font-bold">A.</span>
+                            <span><strong>Regla de Coherencia:</strong> El sistema organiza los datos, pero las texturas
+                                y el aire abrazan a la persona.</span>
+                        </div>
+                        <div class="flex items-start gap-2 bg-white/60 p-2.5 rounded border border-piedra/60">
+                            <span class="font-mono text-olivo font-bold">B.</span>
+                            <span><strong>Regla estricta de una sola tinta:</strong> Cada vector o jerarquía debe operar
+                                impecablemente en monocromía técnica pura.</span>
+                        </div>
+                        <div class="flex items-start gap-2 bg-white/60 p-2.5 rounded border border-piedra/60">
+                            <span class="font-mono text-tinta font-bold">C.</span>
+                            <span><strong>Cero artificios 3D o degradados:</strong> Lenguaje 100% plano, limpio,
+                                calibrado y atemporal.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: El Plano Arquitectónico y Sello de Hospitalidad -->
+                <div class="col-span-12 lg:col-span-6 space-y-4">
+                    <!-- Caja Simulación Gráfica de Plano Técnico -->
+                    <div class="bg-white/80 border border-piedra p-5 rounded-sm relative overflow-hidden">
+                        <!-- Cuadrícula técnica sutil -->
+                        <div class="absolute inset-0 pointer-events-none opacity-15"
+                            style="background-image: linear-gradient(to right, #1C2B36 1px, transparent 1px), linear-gradient(to bottom, #1C2B36 1px, transparent 1px); background-size: 20px 20px;">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between border-b border-piedra/50 pb-2 mb-3">
+                                <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50">ESQUEMA
+                                    TÉCNICO DE REFERENCIA</span>
+                                <span class="font-mono text-[9px] text-siena font-semibold">COTA MODULAR: 0.5X</span>
+                            </div>
+
+                            <div
+                                class="h-28 border border-dashed border-piedra rounded flex items-center justify-center bg-lienzo/40 relative">
+                                <div class="text-center">
+                                    <span
+                                        class="font-mono text-xs uppercase tracking-widest text-tinta font-bold block mb-1">[PLANO
+                                        ARQUITECTÓNICO HABITADO]</span>
+                                    <span class="font-serif italic text-[11px] text-tinta/60">Estructura calada · Líneas
+                                        limpias · Respiraderos internos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monograma / Sello de Hospitalidad -->
+                    <div class="bg-white/60 border border-piedra p-4 rounded-sm flex items-center gap-6">
+                        <div
+                            class="w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] shrink-0 rounded-full border-2 border-piedra p-2 flex items-center justify-center bg-lienzo shadow-sm">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Rec-1.png"
+                                alt="Sello de Hospitalidad GDB" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <span
+                                class="font-mono text-[9px] text-siena uppercase tracking-widest font-bold block">RECURSO
+                                SECUNDARIO AUTORIZADO</span>
+                            <h4 class="font-serif text-base font-semibold text-tinta">Sello de Hospitalidad</h4>
+                            <p class="text-[11px] text-tinta/75 leading-relaxed">
+                                Monograma circular cerrado con inicial 'G' y año de fundación (2026). Simboliza la firma
+                                del anfitrión de alta escuela en cierres de proyectos. <em>Prohibido convertirlo en
+                                    trama o repetirlo como patrón continuo.</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · SISTEMA GRÁFICO & MATRIZ</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 14 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 15: PALETA CROMÁTICA OFICIAL & PROPORCIÓN 60/25/5/5/5
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">15</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">SISTEMA CROMÁTICO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · PALETA &
+                    PROPORCIONES</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="space-y-4 my-auto">
+                <!-- Barra de Distribución Proporcional Oficial -->
+                <div>
+                    <div class="flex justify-between items-baseline mb-1">
+                        <span class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">REGLA
+                            PROPORCIONAL DE DISTRIBUCIÓN CROMÁTICA</span>
+                        <span class="font-mono text-[10px] text-tinta/60">FÓRMULA CANÓNICA: 60% / 25% / 5% / 5% /
+                            5%</span>
+                    </div>
+                    <div class="w-full h-7 rounded-sm overflow-hidden flex border border-piedra shadow-inner">
+                        <div class="bg-lienzo h-full border-r border-piedra flex items-center justify-center font-mono text-[10px] text-tinta font-bold"
+                            style="width: 60%;">60% LIENZO ARENA</div>
+                        <div class="bg-tinta h-full text-lienzo border-r border-tinta flex items-center justify-center font-mono text-[10px] font-bold"
+                            style="width: 25%;">25% AZUL PIZARRA</div>
+                        <div class="bg-siena h-full text-lienzo border-r border-siena flex items-center justify-center font-mono text-[9px] font-bold"
+                            style="width: 5%;">5%</div>
+                        <div class="bg-olivo h-full text-lienzo border-r border-olivo flex items-center justify-center font-mono text-[9px] font-bold"
+                            style="width: 5%;">5%</div>
+                        <div class="bg-piedra h-full text-tinta flex items-center justify-center font-mono text-[9px] font-bold"
+                            style="width: 5%;">5%</div>
+                    </div>
+                </div>
+
+                <!-- Grilla de 5 Muestras de Color -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                    <!-- 1. Lienzo Arena -->
+                    <div class="bg-white/70 border border-piedra p-3 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-16 rounded border border-piedra/60 mb-2 shadow-sm"
+                                style="background-color: #F4F1EA;"></div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">COLOR
+                                PRINCIPAL (60%)</span>
+                            <h4 class="font-serif text-base font-bold text-tinta">Lienzo Arena</h4>
+                        </div>
+                        <div class="space-y-1 font-mono text-[10px] text-tinta/80 mt-2 pt-2 border-t border-piedra/40">
+                            <div>HEX: <strong class="text-tinta">#F4F1EA</strong></div>
+                            <div>RGB: 244, 241, 234</div>
+                            <div>CMYK: 3, 4, 8, 0</div>
+                            <p class="text-[9px] font-sans text-tinta/70 mt-1">Fondo general, respiro cálido y
+                                contención.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Azul Pizarra Profundo -->
+                    <div class="bg-white/70 border border-piedra p-3 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-16 rounded mb-2 shadow-sm" style="background-color: #1C2B36;"></div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">COLOR TINTA
+                                (25%)</span>
+                            <h4 class="font-serif text-base font-bold text-tinta">Azul Pizarra</h4>
+                        </div>
+                        <div class="space-y-1 font-mono text-[10px] text-tinta/80 mt-2 pt-2 border-t border-piedra/40">
+                            <div>HEX: <strong class="text-tinta">#1C2B36</strong></div>
+                            <div>RGB: 28, 43, 54</div>
+                            <div>CMYK: 85, 65, 45, 60</div>
+                            <p class="text-[9px] font-sans text-tinta/70 mt-1">Textos y titulares de alto contraste y
+                                autoridad.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Tierra de Siena -->
+                    <div class="bg-white/70 border border-piedra p-3 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-16 rounded mb-2 shadow-sm" style="background-color: #C06B49;"></div>
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-siena block font-semibold">COLOR
+                                ACENTO (5%)</span>
+                            <h4 class="font-serif text-base font-bold text-tinta">Tierra de Siena</h4>
+                        </div>
+                        <div class="space-y-1 font-mono text-[10px] text-tinta/80 mt-2 pt-2 border-t border-piedra/40">
+                            <div>HEX: <strong class="text-tinta">#C06B49</strong></div>
+                            <div>RGB: 192, 107, 73</div>
+                            <div>CMYK: 15, 65, 70, 10</div>
+                            <p class="text-[9px] font-sans text-tinta/70 mt-1">Llamadas a la acción y calidez
+                                hospitalaria.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Verde Olivo Oscuro -->
+                    <div class="bg-white/70 border border-piedra p-3 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-16 rounded mb-2 shadow-sm" style="background-color: #4A5D4E;"></div>
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-olivo block font-semibold">ACENTO
+                                SECUNDARIO (5%)</span>
+                            <h4 class="font-serif text-base font-bold text-tinta">Verde Olivo</h4>
+                        </div>
+                        <div class="space-y-1 font-mono text-[10px] text-tinta/80 mt-2 pt-2 border-t border-piedra/40">
+                            <div>HEX: <strong class="text-tinta">#4A5D4E</strong></div>
+                            <div>RGB: 74, 93, 78</div>
+                            <div>CMYK: 65, 40, 65, 30</div>
+                            <p class="text-[9px] font-sans text-tinta/70 mt-1">Separadores y estabilizador visual
+                                ordenado.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Gris Piedra Cálido -->
+                    <div class="bg-white/70 border border-piedra p-3 rounded-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-16 rounded mb-2 shadow-sm" style="background-color: #D2CEC4;"></div>
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-tinta/50 block">COLOR
+                                NEUTRO (5%)</span>
+                            <h4 class="font-serif text-base font-bold text-tinta">Gris Piedra</h4>
+                        </div>
+                        <div class="space-y-1 font-mono text-[10px] text-tinta/80 mt-2 pt-2 border-t border-piedra/40">
+                            <div>HEX: <strong class="text-tinta">#D2CEC4</strong></div>
+                            <div>RGB: 210, 206, 196</div>
+                            <div>CMYK: 15, 15, 20, 0</div>
+                            <p class="text-[9px] font-sans text-tinta/70 mt-1">Bordes, grillas técnicas y planos
+                                silenciosos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combinaciones Permitidas vs No Permitidas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                    <div
+                        class="p-2.5 bg-white/60 border border-olivo/30 rounded flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-olivo"></span>
+                            <strong class="font-mono text-[10px] uppercase text-olivo">COMBINACIONES
+                                PERMITIDAS:</strong>
+                        </div>
+                        <span class="text-[11px] text-tinta/80">Tinta sobre Lienzo · Lienzo sobre Tinta · Acento Siena
+                            sobre Tinta.</span>
+                    </div>
+
+                    <div
+                        class="p-2.5 bg-white/60 border border-red-300 rounded flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-red-600"></span>
+                            <strong class="font-mono text-[10px] uppercase text-red-600">PROHIBIDO COMBINAR:</strong>
+                        </div>
+                        <span class="text-[11px] text-tinta/80">Tierra de Siena sobre Verde Olivo · Azul Pizarra sobre
+                            Verde Olivo.</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · PALETA CROMÁTICA OFICIAL</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 15 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 16: SISTEMA TIPOGRÁFICO & ESCALA JERÁRQUICA VIVA
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">16</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">SISTEMA TIPOGRÁFICO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · JERARQUÍA &
+                    FUENTES</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid grid-cols-12 gap-6 my-auto items-start">
+                <!-- Columna Izquierda: Especímenes de las 3 Fuentes -->
+                <div class="col-span-12 lg:col-span-5 space-y-3">
+                    <div class="border-b border-piedra/60 pb-1">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold block">TRÍO
+                            TIPOGRÁFICO INSTITUCIONAL</span>
+                        <h3 class="font-serif text-xl text-tinta">Fuentes Oficiales</h3>
+                    </div>
+
+                    <!-- DM Serif Display -->
+                    <div class="bg-white/60 border border-piedra p-3 rounded-sm space-y-1">
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-[10px] text-siena font-bold uppercase">DISPLAY TITULARES</span>
+                            <span class="font-mono text-[9px] text-tinta/50">SIL OFL · Regular 400</span>
+                        </div>
+                        <h4 class="font-serif text-2xl text-tinta">DM Serif Display</h4>
+                        <p class="font-serif text-xs text-tinta/70 tracking-widest uppercase">A B C D E F G H I J K L M
+                            N Ñ O P Q R S T U V W X Y Z</p>
+                        <p class="text-[10px] text-tinta/60 font-sans mt-1">Aporta la autoridad y el peso clásico que el
+                            arquetipo Sabio requiere.</p>
+                    </div>
+
+                    <!-- DM Sans -->
+                    <div class="bg-white/60 border border-piedra p-3 rounded-sm space-y-1">
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-[10px] text-olivo font-bold uppercase">TEXTO EDITORIAL
+                                (BODY)</span>
+                            <span class="font-mono text-[9px] text-tinta/50">Regular 400 / Medium 500</span>
+                        </div>
+                        <h4 class="font-sans font-medium text-lg text-tinta">DM Sans</h4>
+                        <p class="font-sans text-xs text-tinta/70 tracking-wide">A B C D E F G H I J K L M N Ñ O P Q R S
+                            T U V W X Y Z · a b c d e f g h i j k l m n ñ o p q r s t u v w x y z</p>
+                        <p class="text-[10px] text-tinta/60 font-sans mt-1">Lectura fluida, neutra y accesible en
+                            párrafos, entregables y documentos.</p>
+                    </div>
+
+                    <!-- JetBrains Mono -->
+                    <div class="bg-white/60 border border-piedra p-3 rounded-sm space-y-1">
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-[10px] text-tinta font-bold uppercase">TÉCNICA & METADATOS
+                                (MONO)</span>
+                            <span class="font-mono text-[9px] text-tinta/50">JetBrains Mono · Regular</span>
+                        </div>
+                        <h4 class="font-mono text-base text-tinta font-normal">JetBrains Mono</h4>
+                        <p class="font-mono text-xs text-tinta/70">0 1 2 3 4 5 6 7 8 9 · GDB-STUDIO-2026</p>
+                        <p class="text-[10px] text-tinta/60 font-sans mt-1">Cifras analíticas, tablas operativas,
+                            rótulos de UI y metadatos clínicos.</p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Escala Jerárquica Viva -->
+                <div class="col-span-12 lg:col-span-7 bg-white/70 border border-piedra p-4 rounded-sm space-y-2.5">
+                    <div class="border-b border-piedra/60 pb-1 flex justify-between items-baseline">
+                        <span class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">ESCALA
+                            EDITORIAL EN ACCIÓN</span>
+                        <span class="font-mono text-[9px] text-tinta/40 uppercase">ESPECIFICACIONES VIVAS</span>
+                    </div>
+
+                    <!-- Display XL -->
+                    <div class="border-b border-piedra/40 pb-2">
+                        <div class="flex justify-between font-mono text-[9px] text-tinta/50 mb-0.5">
+                            <span>DISPLAY_XL · 64px / 1.1 / DM Serif Display</span>
+                            <span>Portadas & Títulos Maestros</span>
+                        </div>
+                        <p class="font-serif text-3xl sm:text-4xl text-tinta leading-none">Estructura Empática</p>
+                    </div>
+
+                    <!-- H1 -->
+                    <div class="border-b border-piedra/40 pb-2">
+                        <div class="flex justify-between font-mono text-[9px] text-tinta/50 mb-0.5">
+                            <span>H1 · 40px / 1.2 / DM Serif Display</span>
+                            <span>Títulos de Sección</span>
+                        </div>
+                        <p class="font-serif text-2xl text-tinta leading-tight">Diagnóstico y Método</p>
+                    </div>
+
+                    <!-- H2 -->
+                    <div class="border-b border-piedra/40 pb-2">
+                        <div class="flex justify-between font-mono text-[9px] text-tinta/50 mb-0.5">
+                            <span>H2 · 28px / 1.3 / DM Serif Display</span>
+                            <span>Subtítulos & Citas Destacadas</span>
+                        </div>
+                        <p class="font-serif italic text-lg text-siena">«Las personas hacen funcionar los negocios.»</p>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="border-b border-piedra/40 pb-2">
+                        <div class="flex justify-between font-mono text-[9px] text-tinta/50 mb-0.5">
+                            <span>BODY · 16px / 1.6 / DM Sans Regular</span>
+                            <span>Párrafos Descriptivos</span>
+                        </div>
+                        <p class="font-sans text-xs text-tinta/80 leading-relaxed">
+                            No tercerizamos nuestra mirada ni aplicamos fórmulas universales. Intervenimos como un socio
+                            de pensamiento que desciende a la trinchera para devolver la calma operativa al líder del
+                            negocio.
+                        </p>
+                    </div>
+
+                    <!-- Caption & Eyebrow -->
+                    <div class="grid grid-cols-2 gap-3 pt-1">
+                        <div>
+                            <div class="font-mono text-[9px] text-tinta/50">EYEBROW · 11px / Tracking 0.1em</div>
+                            <span class="font-mono text-[10px] uppercase text-olivo font-bold tracking-widest">SISTEMA
+                                DIRECTIVO B2B</span>
+                        </div>
+                        <div>
+                            <div class="font-mono text-[9px] text-tinta/50">CAPTION · 13px / JetBrains Mono</div>
+                            <span class="font-mono text-[10px] text-tinta/70">METADATOS · REF. GDB-DOC-02 · V1.0</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · SISTEMA TIPOGRÁFICO</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 16 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 17: ARQUITECTURA DE MARCA, LOCK-UPS (L1 A L4) & USOS INCORRECTOS
+         ============================================================================= -->
+    <div class="brand-sheet sheet-dense">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-2 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">17</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">GOBERNANZA DEL
+                        IMAGOTIPO</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">PROPUESTA B · LA CONEXIÓN
+                    ESENCIAL</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="space-y-3 my-auto">
+                <!-- Bloque 1: Lock-ups Autorizados (L1 a L4) -->
+                <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">LOCK-UPS
+                            AUTORIZADOS</span>
+                        <span class="font-mono text-[9px] text-tinta/50 uppercase">ÁREA DE RESPETO: 0.5X · PROPORCIÓN
+                            1:2.5</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                        <!-- L1 Horizontal -->
+                        <div
+                            class="bg-[#F4F1EA] border border-piedra p-3.5 rounded-sm flex flex-col justify-between min-h-[175px]">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="font-mono text-[9px] font-bold text-tinta bg-piedra/50 px-1.5 py-0.5 rounded">L1
+                                    · HORIZONTAL</span>
+                                <span class="font-mono text-[8px] text-tinta/50">Fondo #F4F1EA</span>
+                            </div>
+                            <div
+                                class="my-auto border border-dashed border-piedra/80 rounded py-2.5 px-2 text-center flex items-center justify-center bg-white/60">
+                                <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                                    alt="L1 Horizontal Claro"
+                                    class="h-[56px] sm:h-[66px] w-auto object-contain mx-auto">
+                            </div>
+                            <span class="text-[9px] text-tinta/70 block">Uso: Web, encabezados, reportes y
+                                firmas.</span>
+                        </div>
+
+                        <!-- L2 Apilado -->
+                        <div
+                            class="bg-[#1C2B36] text-lienzo border border-tinta p-3.5 rounded-sm flex flex-col justify-between min-h-[175px]">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="font-mono text-[9px] font-bold text-siena bg-lienzo/10 px-1.5 py-0.5 rounded">L2
+                                    · APILADO</span>
+                                <span class="font-mono text-[8px] text-lienzo/50">Fondo #1C2B36</span>
+                            </div>
+                            <div
+                                class="my-auto border border-dashed border-lienzo/30 rounded py-2 px-2 text-center flex flex-col items-center justify-center bg-white/5">
+                                <div
+                                    class="w-10 h-10 rounded-full border border-lienzo/70 flex items-center justify-center font-serif text-sm text-lienzo mb-1.5 shadow-xs">
+                                    G</div>
+                                <span class="font-serif text-[13px] tracking-wider text-lienzo">GDB STUDIO</span>
+                            </div>
+                            <span class="text-[9px] text-lienzo/70 block">Uso: Portadas, tarjetas y soportes
+                                verticales.</span>
+                        </div>
+
+                        <!-- L3 Inverso -->
+                        <div
+                            class="bg-[#1C2B36] text-lienzo border border-tinta p-3.5 rounded-sm flex flex-col justify-between min-h-[175px]">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="font-mono text-[9px] font-bold text-lienzo bg-lienzo/10 px-1.5 py-0.5 rounded">L3
+                                    · INVERSO</span>
+                                <span class="font-mono text-[8px] text-lienzo/50">Monocromía Luz</span>
+                            </div>
+                            <div
+                                class="my-auto border border-dashed border-lienzo/30 rounded py-2.5 px-2 text-center flex items-center justify-center bg-black/30">
+                                <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro2.png"
+                                    alt="L3 Inverso Oscuro" class="h-[56px] sm:h-[66px] w-auto object-contain mx-auto">
+                            </div>
+                            <span class="text-[9px] text-lienzo/70 block">Uso: Masterclasses, decks y cierres
+                                premium.</span>
+                        </div>
+
+                        <!-- L4 Acento -->
+                        <div
+                            class="bg-[#C06B49] text-lienzo border border-siena p-3.5 rounded-sm flex flex-col justify-between min-h-[175px]">
+                            <div class="flex justify-between items-start">
+                                <span
+                                    class="font-mono text-[9px] font-bold text-tinta bg-lienzo/80 px-1.5 py-0.5 rounded">L4
+                                    · ACENTO</span>
+                                <span class="font-mono text-[8px] text-lienzo/70">Fondo #C06B49</span>
+                            </div>
+                            <div
+                                class="my-auto border border-dashed border-lienzo/40 rounded py-3 px-2 text-center bg-white/10">
+                                <span class="font-serif text-lg font-bold text-lienzo tracking-wider block">GDB
+                                    STUDIO</span>
+                                <span class="font-mono text-[9px] text-lienzo/95 tracking-widest uppercase">CONSULTORÍA
+                                    BOUTIQUE</span>
+                            </div>
+                            <span class="text-[9px] text-lienzo/90 block">Uso: CTAs destacados y placas clave.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque 2: Matriz de 6 Usos Incorrectos (Error-1 a Error-6) -->
+                <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="font-mono text-red-600 uppercase tracking-widest font-semibold text-[10px]">USOS
+                            INCORRECTOS ESTRICTAMENTE PROHIBIDOS</span>
+                        <span class="font-mono text-[9px] text-tinta/50 uppercase">MATRIZ ERROR-1 A ERROR-6</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+                        <!-- Error 1 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-1</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Rellenar lazos</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Destruye el calado, volviendo el símbolo pesado
+                                    y rígido.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Siempre calado lineal.</span>
+                        </div>
+
+                        <!-- Error 2 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-2</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Punto en otro
+                                    color</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Pintarlo de Verde Olivo o Azul disuelve el
+                                    ancla cálida.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Punto siempre Siena.</span>
+                        </div>
+
+                        <!-- Error 3 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-3</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Descentrar en
+                                    L2</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Mover el símbolo asimétricamente denota
+                                    improvisación.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Eje milimétricamente centrado.</span>
+                        </div>
+
+                        <!-- Error 4 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-4</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Encerrar en
+                                    caja</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Ponerlo dentro de una pastilla genera
+                                    abrumamiento.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Área de respeto 0.5X al aire.</span>
+                        </div>
+
+                        <!-- Error 5 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-5</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Símbolo
+                                    gigante</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Diluye la autoridad institucional de la DM
+                                    Serif Display.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Mantener escala 1:2.5.</span>
+                        </div>
+
+                        <!-- Error 6 -->
+                        <div
+                            class="bg-red-50/60 border border-red-200 p-2 rounded text-[10px] flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono font-bold text-red-700 block">ERROR-6</span>
+                                <strong class="text-tinta block font-serif leading-tight mt-0.5">Fondo con
+                                    trama</strong>
+                                <p class="text-[9px] text-tinta/70 mt-1">Superponer sobre líneas o gráficos anula la
+                                    legibilidad fina.</p>
+                            </div>
+                            <span
+                                class="text-[8px] font-mono text-olivo mt-1.5 pt-1 border-t border-red-200/60 font-semibold">REGLA:
+                                Solo fondos limpios y sólidos.</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-2 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · LOCK-UPS & MATRIZ DE ERRORES</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 17 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 18: APLICACIONES EN SOPORTES & PUESTA EN MATERIAL (LÁMINA COMPLETA)
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-lienzo text-tinta">
+            <!-- Header -->
+            <header class="border-b border-piedra/60 pb-3 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-xs text-siena font-semibold tracking-widest">18</span>
+                    <span class="text-piedra">/</span>
+                    <span class="font-mono text-xs uppercase tracking-wider text-tinta/80">APLICACIONES & PUESTA EN
+                        MATERIAL</span>
+                </div>
+                <span class="font-mono text-[10px] text-tinta/50 uppercase tracking-widest">GDB STUDIO · SOPORTES
+                    CANÓNICOS</span>
+            </header>
+
+            <!-- Main Content -->
+            <main class="space-y-4 my-auto">
+                <!-- Bloque 1: Mockups Editoriales Canónicos -->
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span
+                            class="font-mono text-[10px] text-siena uppercase tracking-widest font-semibold">ECOSISTEMA
+                            DE SOPORTES PRIMARIOS</span>
+                        <span class="font-mono text-[9px] text-tinta/40 uppercase">3 TOUCHPOINTS CRÍTICOS</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                        <!-- Soporte A: Redes Sociales (Avatar & Feed UI) -->
+                        <div
+                            class="bg-white/70 border border-piedra p-3.5 rounded-sm flex flex-col justify-between shadow-xs">
+                            <div>
+                                <div
+                                    class="flex justify-between items-center border-b border-piedra/40 pb-1 mb-2 font-mono text-[9px]">
+                                    <span class="font-bold text-siena uppercase">01 · REDES SOCIALES</span>
+                                    <span
+                                        class="bg-lienzo px-1.5 py-0.5 rounded border border-piedra/60 text-[8px] text-tinta/70 font-semibold">AVATAR
+                                        & FEED</span>
+                                </div>
+
+                                <!-- Mockup Real UI Instagram/LinkedIn -->
+                                <div
+                                    class="bg-[#fcfbfa] border border-piedra/80 rounded p-2.5 mb-2 shadow-xs text-tinta">
+                                    <!-- Header Social Profile -->
+                                    <div
+                                        class="flex items-center justify-between border-b border-piedra/40 pb-1.5 mb-2">
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="font-mono text-[9px] font-bold text-tinta">@gdb.studio</span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                        </div>
+                                        <span class="font-mono text-[9px] text-tinta/40">···</span>
+                                    </div>
+
+                                    <!-- Profile Avatar + Stats -->
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="relative shrink-0">
+                                            <div
+                                                class="w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-siena via-[#e08a6d] to-olivo flex items-center justify-center">
+                                                <div
+                                                    class="w-full h-full rounded-full bg-lienzo p-1.5 flex items-center justify-center overflow-hidden">
+                                                    <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                                                        alt="GDB Avatar" class="w-full h-full object-contain">
+                                                </div>
+                                            </div>
+                                            <span
+                                                class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-olivo text-white rounded-full border border-white flex items-center justify-center text-[7px] font-bold">✓</span>
+                                        </div>
+                                        <div class="grid grid-cols-3 gap-1.5 text-center font-mono text-[7px] flex-1">
+                                            <div><strong class="block text-[9px] text-tinta">36</strong>posts</div>
+                                            <div><strong class="block text-[9px] text-tinta">1.8k</strong>seguidores
+                                            </div>
+                                            <div><strong class="block text-[9px] text-tinta">142</strong>siguiendo</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bio -->
+                                    <div class="text-[8px] leading-snug mb-2 font-sans">
+                                        <strong class="font-serif text-[9.5px] text-tinta block">GDB Studio · Consultora
+                                            Boutique B2B</strong>
+                                        <span class="text-tinta/75 italic">«Estructura empática: la precisión geométrica
+                                            al servicio de la calidez humana.»</span>
+                                    </div>
+
+                                    <!-- Feed 3 Posts -->
+                                    <div class="grid grid-cols-3 gap-1.5 pt-1.5 border-t border-piedra/40">
+                                        <div
+                                            class="aspect-square bg-tinta rounded p-1.5 flex flex-col justify-between text-lienzo text-[6px]">
+                                            <span class="font-mono text-siena text-[5.5px]">#01</span>
+                                            <span class="font-serif leading-tight">Diagnóstico Certero</span>
+                                        </div>
+                                        <div
+                                            class="aspect-square bg-lienzo border border-piedra/80 rounded p-1.5 flex flex-col justify-between text-tinta text-[6px]">
+                                            <span class="font-mono text-olivo text-[5.5px]">#02</span>
+                                            <span class="font-sans font-medium leading-tight">Arquitectura
+                                                Operativa</span>
+                                        </div>
+                                        <div
+                                            class="aspect-square bg-siena rounded p-1.5 flex flex-col justify-between text-lienzo text-[6px]">
+                                            <span class="font-mono text-lienzo/70 text-[5.5px]">#03</span>
+                                            <span class="font-serif leading-tight">Hospitalidad B2B</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text-[11px] text-tinta/80 leading-relaxed">
+                                    <strong>Símbolo independiente:</strong> Trazos calados y punto central en Siena. Se
+                                    prohíbe incluir el descriptor textual en el avatar para preservar la legibilidad en
+                                    microformato.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 pt-1.5 border-t border-piedra/30 mt-2 block">PRESENCIA
+                                DIGITAL</span>
+                        </div>
+
+                        <!-- Soporte B: Portada de Presentación (Pitch Deck 16:9) -->
+                        <div
+                            class="bg-white/70 border border-piedra p-3.5 rounded-sm flex flex-col justify-between shadow-xs">
+                            <div>
+                                <div
+                                    class="flex justify-between items-center border-b border-piedra/40 pb-1 mb-2 font-mono text-[9px]">
+                                    <span class="font-bold text-olivo uppercase">02 · PITCH DECK</span>
+                                    <span
+                                        class="bg-lienzo px-1.5 py-0.5 rounded border border-piedra/60 text-[8px] text-tinta/70 font-semibold">16:9
+                                        SLIDES</span>
+                                </div>
+
+                                <!-- Mockup Real Slide Keynote 16:9 Modo Inverso -->
+                                <div
+                                    class="w-full bg-[#131f27] text-lienzo border border-[#2c3f4e] rounded-md p-3 mb-2 shadow-md flex flex-col justify-between aspect-[16/10] relative overflow-hidden">
+                                    <!-- Window top bar estilo macOS -->
+                                    <div
+                                        class="flex items-center justify-between border-b border-lienzo/15 pb-1.5 mb-1.5">
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+                                            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+                                            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+                                            <span
+                                                class="font-mono text-[7.5px] text-lienzo/60 ml-1">gdb_pitch_estrategia.key</span>
+                                        </div>
+                                        <span
+                                            class="font-mono text-[7px] text-siena font-bold bg-siena/20 px-2 py-0.5 rounded uppercase tracking-wider border border-siena/30">MODO
+                                            INVERSO (L3)</span>
+                                    </div>
+
+                                    <!-- Slide Main Content (Limpio, Nítido, Alto Impacto) -->
+                                    <div
+                                        class="my-auto py-2.5 px-3 bg-lienzo/5 border-l-2 border-siena rounded-r flex flex-col justify-center space-y-2">
+                                        <div>
+                                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro2.png"
+                                                alt="Lockup Inverso GDB"
+                                                class="h-8 sm:h-9 w-auto object-contain drop-shadow-sm">
+                                        </div>
+                                        <h4
+                                            class="font-serif text-[12px] sm:text-[14px] text-lienzo font-normal leading-tight italic">
+                                            «Estructura empática para negocios humanos.»
+                                        </h4>
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                            <p
+                                                class="font-mono text-[7.5px] sm:text-[8.5px] text-siena uppercase tracking-widest font-medium">
+                                                Diagnóstico Certero · Transformación B2B
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide Footer Meta -->
+                                    <div
+                                        class="flex items-center justify-between font-mono text-[7px] text-lienzo/50 border-t border-lienzo/15 pt-1.5">
+                                        <span>GDB STUDIO · DIRECCIÓN DE NEGOCIOS</span>
+                                        <span class="text-siena font-semibold">SLIDE 01 / 24</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-[11px] text-tinta/80 leading-relaxed">
+                                    <strong>Lock-up L3 Inverso:</strong> Azul Pizarra de fondo con textos en Lienzo
+                                    Arena y acento Siena. Rigurosamente libre de imágenes ruidosas, saturadas o
+                                    degradados de color.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 pt-1.5 border-t border-piedra/30 mt-2 block">PRESENTACIONES
+                                B2B</span>
+                        </div>
+
+                        <!-- Soporte C: Hoja Membrete A4 & Papelería Táctil -->
+                        <div
+                            class="bg-white/70 border border-piedra p-3.5 rounded-sm flex flex-col justify-between shadow-xs">
+                            <div>
+                                <div
+                                    class="flex justify-between items-center border-b border-piedra/40 pb-1 mb-2 font-mono text-[9px]">
+                                    <span class="font-bold text-tinta uppercase">03 · PAPELERÍA A4</span>
+                                    <span
+                                        class="bg-lienzo px-1.5 py-0.5 rounded border border-piedra/60 text-[8px] text-tinta/70 font-semibold">TÁCTIL
+                                        & 1 TINTA</span>
+                                </div>
+
+                                <!-- Mockup Real Hoja Membrete A4 -->
+                                <div
+                                    class="w-full bg-[#fbf9f5] border border-piedra/80 rounded-sm p-3 mb-2 shadow-xs flex flex-col justify-between aspect-[16/10] relative text-tinta overflow-hidden">
+                                    <!-- Header con Lockup L1 Claro -->
+                                    <div class="flex items-center justify-between border-b border-piedra/60 pb-1.5">
+                                        <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Claro2.png"
+                                            alt="GDB Membrete L1"
+                                            style="height: 22px; width: auto; max-height: 22px; object-fit: contain;">
+                                        <div class="text-right font-mono text-[6.5px] text-tinta/60 leading-tight">
+                                            <span class="font-bold text-siena">EXPEDIENTE Nº 2026-B2B</span><br>
+                                            <span class="text-[5.5px]">CONFIDENCIAL · DIRECTIVA</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Body -->
+                                    <div class="space-y-1 my-auto py-1.5">
+                                        <span
+                                            class="font-mono text-[7px] text-olivo uppercase font-bold tracking-wider block">
+                                            1. DIAGNÓSTICO ESTRUCTURAL & MAPA OPERATIVO
+                                        </span>
+                                        <p class="font-sans text-[7.5px] text-tinta/85 leading-snug">
+                                            Relevamiento de flujos de valor, matriz de decisiones y arquitectura de
+                                            liderazgo humano.
+                                        </p>
+                                        <div
+                                            class="flex items-center gap-1.5 font-mono text-[6.5px] text-tinta/60 pt-0.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-siena"></span>
+                                            <span>MÉTODO: ARQUITECTURA DE NEGOCIOS VOS</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Footer con Sello de Hospitalidad Real -->
+                                    <div
+                                        class="border-t border-piedra/60 pt-1.5 flex items-center justify-between font-mono text-[6.5px]">
+                                        <div class="flex items-center gap-2">
+                                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Rec-1.png"
+                                                alt="Sello GDB" width="22" height="22"
+                                                style="width: 22px; height: 22px; max-width: 22px; max-height: 22px; object-fit: contain; flex-shrink: 0;">
+                                            <span class="text-tinta/90 font-medium">Glodier Dario Biedma ·
+                                                Director</span>
+                                        </div>
+                                        <span class="text-tinta/50 text-[6px]">BUENOS AIRES · 2026</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-[11px] text-tinta/80 leading-relaxed">
+                                    <strong>Operación monocromática:</strong> Papel de alto gramaje con textura táctil.
+                                    Tipografía DM Sans (11pt) y JetBrains Mono (9pt). Prohibido utilizar fondos oscuros
+                                    plenos.
+                                </p>
+                            </div>
+                            <span
+                                class="font-mono text-[9px] text-tinta/40 pt-1.5 border-t border-piedra/30 mt-2 block">DOCUMENTACIÓN
+                                LEGAL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque 2: Estrategia de Contenido & Feed -->
+                <div class="bg-white/50 border border-piedra p-4 rounded-sm">
+                    <div class="flex items-center justify-between border-b border-piedra/40 pb-2 mb-3">
+                        <div>
+                            <span
+                                class="font-mono text-[10px] text-olivo uppercase tracking-widest font-semibold block">CONCEPTO
+                                DE FEED & PLANIFICACIÓN</span>
+                            <h4 class="font-serif text-base text-tinta">«El plano arquitectónico habitado»</h4>
+                        </div>
+                        <div class="flex items-center gap-2 font-mono text-[10px] text-tinta/60">
+                            <span>CADENCIA SEMANAL:</span>
+                            <span class="px-2 py-0.5 bg-piedra/40 text-tinta font-bold rounded">3 POSTS · 1 REEL · 5
+                                STORIES</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                        <div class="p-2.5 bg-white/70 border border-piedra rounded">
+                            <span class="font-mono text-[9px] text-siena uppercase font-bold block">2X SEMANA</span>
+                            <strong class="font-serif text-tinta text-xs block mt-0.5">Diagnóstico Clínico</strong>
+                            <p class="text-[11px] text-tinta/75 mt-1">Placas tipográficas de alto contraste con
+                                preguntas e insights agudos sobre el desorden operativo.</p>
+                        </div>
+
+                        <div class="p-2.5 bg-white/70 border border-piedra rounded">
+                            <span class="font-mono text-[9px] text-olivo uppercase font-bold block">1X SEMANA</span>
+                            <strong class="font-serif text-tinta text-xs block mt-0.5">Arquitectura Operativa</strong>
+                            <p class="text-[11px] text-tinta/75 mt-1">Carruseles didácticos con esquemas técnicos,
+                                tablas en Gris Piedra y fuentes monoespaciadas.</p>
+                        </div>
+
+                        <div class="p-2.5 bg-white/70 border border-piedra rounded">
+                            <span class="font-mono text-[9px] text-tinta uppercase font-bold block">1X SEMANA</span>
+                            <strong class="font-serif text-tinta text-xs block mt-0.5">Hospitalidad en
+                                Trinchera</strong>
+                            <p class="text-[11px] text-tinta/75 mt-1">Contenido audiovisual y fotográfico táctil
+                                centrado en el factor humano de los equipos.</p>
+                        </div>
+
+                        <div class="p-2.5 bg-white/70 border border-piedra rounded">
+                            <span class="font-mono text-[9px] text-tinta/60 uppercase font-bold block">QUINCENAL</span>
+                            <strong class="font-serif text-tinta text-xs block mt-0.5">Respiro Editorial</strong>
+                            <p class="text-[11px] text-tinta/75 mt-1">Placas despojadas con una sola palabra clave,
+                                funcionando como pausa visual en la grilla.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer
+                class="border-t border-piedra/60 pt-3 flex justify-between items-center text-[10px] font-mono text-tinta/60">
+                <span>PARTE II · APLICACIONES & PUESTA EN MATERIAL</span>
+                <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 18 / 19</span>
+            </footer>
+        </section>
+    </div>
+
+    <!-- =============================================================================
+         PÁGINA 19: CONTRATAPA MAESTRA & CIERRE INSTITUCIONAL ÚNICO
+         ============================================================================= -->
+    <div class="brand-sheet">
+        <section class="bg-tinta text-lienzo relative overflow-hidden flex flex-col justify-between">
+            <!-- Filigrana abstracta sutil de fondo -->
+            <div class="absolute -left-20 -bottom-20 pointer-events-none opacity-[0.03]">
+                <svg width="650" height="650" viewBox="0 0 100 100" fill="none" stroke="#F4F1EA" stroke-width="0.5">
+                    <circle cx="50" cy="50" r="45" />
+                    <circle cx="50" cy="25" r="25" />
+                    <circle cx="50" cy="75" r="25" />
+                    <circle cx="25" cy="50" r="25" />
+                    <circle cx="75" cy="50" r="25" />
+                </svg>
+            </div>
+
+            <!-- Header Técnico Contratapa -->
+            <header class="border-b border-lienzo/20 pb-3 flex justify-between items-end">
+                <div>
+                    <span class="font-mono text-[10px] tracking-[0.2em] text-siena uppercase font-semibold block">GDB
+                        STUDIO · CIERRE DE SISTEMA</span>
+                    <h2 class="font-mono text-xs uppercase tracking-wider text-lienzo/80 mt-0.5">CONTRATAPA
+                        INSTITUCIONAL & COLOFÓN</h2>
+                </div>
+                <div class="text-right font-mono text-[10px] text-lienzo/60 tracking-wider">
+                    <span>DOCUMENTO MAESTRO</span> · <span class="text-siena font-semibold">LÁMINA FINAL</span>
+                </div>
+            </header>
+
+            <!-- Main Central Contratapa -->
+            <main class="grid grid-cols-12 gap-8 my-auto items-center py-6">
+                <!-- Columna Izquierda: Imagotipo de Clausura & Síntesis de Oficio -->
+                <div class="col-span-12 lg:col-span-7 space-y-6">
+                    <!-- Contenedor Editorial Imagotipo Oficial de Clausura con Asset Real -->
+                    <div
+                        class="border border-dashed border-lienzo/30 p-7 rounded-sm bg-lienzo/5 relative max-w-xl shadow-xs">
+                        <div class="flex items-center justify-between border-b border-lienzo/15 pb-2.5 mb-4">
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50">IDENTIDAD DE
+                                CLAUSURA · REGLA DE RESPETO 0.5X</span>
+                            <span class="font-mono text-[9.5px] text-siena font-semibold">PROPUESTA B APROBADA</span>
+                        </div>
+
+                        <div class="py-5 text-center flex flex-col items-center justify-center">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Oscuro2.png"
+                                alt="GDB Studio Lock-up Inverso"
+                                class="h-[100px] sm:h-[120px] w-auto object-contain mx-auto mb-3.5 drop-shadow-sm">
+                            <span class="font-mono text-xs tracking-[0.25em] text-lienzo/80 uppercase block">CONSULTORÍA
+                                BOUTIQUE B2B</span>
+                        </div>
+
+                        <div
+                            class="border-t border-lienzo/15 pt-2 flex justify-between text-[8.5px] font-mono text-lienzo/40">
+                            <span>WORDMARK DOMINANTE 1:2.5</span>
+                            <span>CALADO MONOCROMÍA LUZ</span>
+                        </div>
+                    </div>
+
+                    <!-- Síntesis de Oficio & Manifiesto Final -->
+                    <div class="space-y-2 max-w-xl">
+                        <span
+                            class="font-mono text-[10px] uppercase tracking-widest text-siena font-semibold block">SÍNTESIS
+                            DE OFICIO & CONDUCTA</span>
+                        <p class="font-serif text-lg sm:text-xl text-lienzo/90 leading-relaxed italic">
+                            «El sistema organiza los datos, pero las texturas y el aire abrazan a la persona.»
+                        </p>
+                        <p class="text-xs sm:text-sm text-lienzo/70 leading-relaxed font-sans">
+                            Transformamos la intuición desordenada en una cultura de hospitalidad, servicio y eficiencia
+                            autónoma. Nuestro rigor es clínico; nuestro abrazo, genuino.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Promesa, Sello de Hospitalidad & Colofón -->
+                <div class="col-span-12 lg:col-span-5 border-l border-lienzo/20 pl-6 lg:pl-8 space-y-5">
+                    <!-- Promesa de Marca -->
+                    <div class="border-b border-lienzo/15 pb-4">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-lienzo/50 block mb-1">PROMESA
+                            DE MARCA</span>
+                        <p class="font-serif italic text-xs sm:text-sm text-lienzo/85 leading-relaxed">
+                            «Acompañarte a transformar tu negocio aportando herramientas prácticas y un diagnóstico
+                            certero, garantizándote siempre la tranquilidad y seguridad de un método claro.»
+                        </p>
+                    </div>
+
+                    <!-- Sello de Hospitalidad de Cierre con Asset Real -->
+                    <div class="flex items-center gap-5 border-b border-lienzo/15 pb-4">
+                        <div
+                            class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] shrink-0 rounded-full border-2 border-lienzo/40 p-2 flex items-center justify-center bg-lienzo/10 shadow-sm">
+                            <img src="https://raw.githubusercontent.com/dcardenas9/glob-gdb-studio-presentacion/main/img/Rec-1.png"
+                                alt="Sello de Hospitalidad GDB" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <span
+                                class="font-mono text-[9px] uppercase tracking-widest text-siena font-semibold block">FIRMA
+                                DEL ANFITRIÓN</span>
+                            <span class="font-serif text-sm text-lienzo">Sello de Hospitalidad 2026</span>
+                            <p class="text-[10px] text-lienzo/60 mt-0.5">Validación final de proyecto y entrega
+                                directiva.</p>
+                        </div>
+                    </div>
+
+                    <!-- Colofón Editorial -->
+                    <div class="space-y-1 font-mono text-[10px] text-lienzo/60">
+                        <span class="text-[9px] uppercase tracking-widest text-lienzo/40 block mb-1">COLOFÓN
+                            EDITORIAL</span>
+                        <div><strong class="text-lienzo">ENTIDAD:</strong> GDB Studio</div>
+                        <div><strong class="text-lienzo">FUNDADOR:</strong> Glodier Dario Biedma</div>
+                        <div><strong class="text-lienzo">DIRECCIÓN DE ARTE:</strong> Glob Studio</div>
+                        <div><strong class="text-lienzo">EMISIÓN:</strong> Septiembre 2026 · Buenos Aires, Argentina
+                        </div>
+                        <div class="text-siena font-semibold pt-1">SISTEMA APROBADO & CERTIFICADO v1.0</div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer Técnico Contratapa -->
+            <footer
+                class="border-t border-lienzo/20 pt-3 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-lienzo/60 gap-2">
+                <div class="flex items-center gap-4">
+                    <span class="w-2 h-2 rounded-full bg-siena"></span>
+                    <span>FIN DEL DOSSIER MAESTRO & BRAND BOOK · GDB STUDIO</span>
+                    <span class="text-lienzo/30">|</span>
+                    <span>19 LÁMINAS TOTALES</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="uppercase tracking-widest text-siena font-semibold">PÁG. 19 / 19</span>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+</body>
+
+</html>
